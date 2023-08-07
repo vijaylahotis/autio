@@ -20,7 +20,7 @@ public class UserCreationPageObjects extends TestAction {
 		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-	} 
+	         } 
 	
 	@FindBy(xpath="//*[@id=\"root\"]/div[2]/div/div[1]/aside/div/ul/li[2]")
     public WebElement Users; 
@@ -43,18 +43,21 @@ public class UserCreationPageObjects extends TestAction {
     String PersonaName="//div[@title='#']";
     
    
-   @FindBy(xpath="//*[text()='Event Based Email']")
-   public WebElement eventbasedemail;
+    @FindBy(xpath="//*[text()='Event Based Email']")
+    public WebElement eventbasedemail;
     
    
-   @FindBy(xpath="//*[text()='Weekly Summary Email']")
-   public WebElement weeklybasedemail;
-    
+    @FindBy(xpath="//*[text()='Weekly Summary Email']")
+    public WebElement weeklybasedemail;
+     
     
     @FindBy(xpath="//*[@id=\"nest-messages_preference_day\"]")
 	public WebElement preferenceday;
     
     String PreferenceDay="//div[@title='#']";
+    
+    @FindBy(xpath="//*[text()='Manage Users']")
+    public WebElement text_manageusers;
 
     public void clickOnUsers() {
 	this.click(User1);
@@ -96,6 +99,11 @@ public class UserCreationPageObjects extends TestAction {
 			e.printStackTrace();
 		}
 	}
+	
+	public String isManageUsersTextDisplayed() {
+		String manageuserstext=text_manageusers.getText();
+		return manageuserstext;
+}
 }
 
 	

@@ -144,7 +144,7 @@ public class TestAction {
 	// Select the desired options
     for (WebElement liElement : listOfElement) {
         // Check if the option needs to be selected
-        if (liElement.getText().equals("LOADING CHARGES") || liElement.getText().equals("UNLOADING CHARGES") || liElement.getText().equals("CUSTOM CLEARANCE")) {
+        if (liElement.getText().equals("Hiring Manager") || liElement.getText().equals("Admin") || liElement.getText().equals("IT Leadership")) {
             // Perform the desired action (e.g., clicking or marking a checkbox)
         	liElement.click();
         }
@@ -295,7 +295,7 @@ public class TestAction {
         }
         
         public void selectByValue(WebElement element, String value) throws Throwable {
-            //logger.info("select element by index value ");
+            //logger.info("select element by text value ");
             try {
                Select se = new Select(element);
                 se.selectByVisibleText(value);

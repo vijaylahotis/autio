@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AdminSuite">
+  <test thread-count="5" name="AdminModuleTest">
+    <classes>
+		
+	<class name="AdminModuleTestScripts.AdminLogin">
+	<methods>
+		 <include name="verifysigninFunctionality"/>
+	</methods> 
+	</class>
+	
+	<class name="AdminModuleTestScripts.AdminModule">
+	<methods>
+		 <include name="CreateUser"/>
+		 <include name="CreateTeamType"/>
+	</methods> 
+	</class>
+	
+		 
+     </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

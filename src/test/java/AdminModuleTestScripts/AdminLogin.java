@@ -6,6 +6,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import basepackage.TestBase;
+import basepackage.TestAction;
 import Utilities.Constants;
 import Utilities.ExpectedValue;
 import PageObjects.SignInPageObjects;
@@ -18,22 +19,12 @@ public class AdminLogin extends TestBase{
 
 	Logger log = Logger.getLogger(AdminLogin.class);
 
-	//sign method
-	public void adminsignin() throws InterruptedException {
-		sign= new SignInPageObjects(driver);
-		sign.navigateUrl(Constants.URL) ; 
-		sign.enterAdminEmail(Constants.adminEmail); 
-		sign.clickOnSign(); 
-		sign.enterAdminPassword(Constants.adminPassword);
-		sign.clickOnSignIn();
-		sign.clickOnYes();
-		//Thread.sleep(5000);
-	}
 	
 	//signin test case
-		@Test(priority=0,description="This testcase verifies signin functionality",enabled=true)
+		@Test(priority=0,description="This testcase verifies to signin",enabled=true)
 		public void verifysigninFunctionality() throws InterruptedException {
-			adminsignin(); 
-			Assert.assertEquals(ExpectedValue.Run,sign.isRunNightJobsDisplayed());
+			sign= new SignInPageObjects(driver);
+			sign.adminsign();
+		    Assert.assertEquals(ExpectedValue.Run,sign.isRunNightJobsDisplayed());
 		}
 }

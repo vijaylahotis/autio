@@ -22,7 +22,7 @@ public class SignInPageObjects extends TestAction{
 
 		PageFactory.initElements(driver, this);
         
-}
+            }
     @FindBy(xpath="//input[@id=\"email\"]")
     public WebElement adminEmail; 
     
@@ -42,34 +42,39 @@ public class SignInPageObjects extends TestAction{
 	public WebElement Run;
     
     
-        public void enterAdminEmail(String adiminemailid) {
-		this.sendkeys(adminEmail,adiminemailid);	
+    public void enterAdminEmail(String adiminemailid) {
+    this.sendkeys(adminEmail,adiminemailid);	
 	        }
     
-        public void clickOnSign() {
-		this.click(Sign);
+    public void clickOnSign() {
+	this.click(Sign);
             }
-		public void enterAdminPassword(String adminpassword) {
-		this.sendkeys(adminPassword,adminpassword);
-		
+    
+	public void enterAdminPassword(String adminpassword) {
+	this.sendkeys(adminPassword,adminpassword);
             }
-		public void clickOnSignIn() {
-		this.click(SignIn);
+	
+	public void clickOnSignIn() {
+	this.click(SignIn);
 	        }	
-		public void clickOnYes() {
-			this.click(Yes);
+	
+	public void clickOnYes() {
+	this.click(Yes);
             }
-		public String isRunNightJobsDisplayed( ) {
-			String RunNightJobs= Run.getText();
+	
+	public String isRunNightJobsDisplayed( ) {
+	String RunNightJobs= Run.getText();
 	    	return RunNightJobs;
-		}
-		public void adminsign() {
-			navigateUrl(Constants.URL) ; 
-			enterAdminEmail(Constants.adminEmail); 
-			clickOnSign();
-			enterAdminPassword(Constants.adminPassword); 
-			clickOnSignIn(); 	 
-			clickOnYes();
-		}
+		    }
+	
+	public void adminsign() {
+	navigateUrl(Constants.URL) ; 
+	enterAdminEmail(Constants.adminEmail); 
+	clickOnSign();
+	enterAdminPassword(Constants.adminPassword); 
+	clickOnSignIn(); 	 
+	clickOnYes();
+	//Thread.sleep(5000);
+		    }
 	    
 }

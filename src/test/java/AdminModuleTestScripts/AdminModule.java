@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 
 import basepackage.TestBase;
+import basepackage.TestAction;
 import Utilities.Constants;
 import Utilities.ExpectedValue;
 import PageObjects.SignInPageObjects;
@@ -23,7 +24,7 @@ public class AdminModule extends TestBase{
 	public UserCreationPageObjects User;
 	public TeamTypePageObjects Type;
 
-	
+	// User Creation
 	@Test(priority=0,description="This testcase verifies to create a User",enabled=true)
 	public void CreateUser() throws InterruptedException  {
 		sign= new SignInPageObjects(driver);
@@ -33,9 +34,11 @@ public class AdminModule extends TestBase{
 		User.selectPerson(Constants.Person3);
 		User.selectPersona(Constants.Persona3);
 		User.clickOnEmails();
+		Thread.sleep(3000);
 		User.selectPreference(Constants.PreferenceDay1);
 
 }
+	// Team Type Creation
 	@Test(priority=1,description="This testcase verifies to create a TeamType",enabled=true)
 	public void CreateTeamType() throws InterruptedException  {
 		sign= new SignInPageObjects(driver);

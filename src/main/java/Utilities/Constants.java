@@ -13,6 +13,8 @@ public class Constants extends TestAction{
 	super(driver);
 	}
 	
+	// Login Credentials
+	
 	public static final String URL = "https://dev.talentsavvy.com/login";
 	public static final String adminEmail = "nagendra@bsaas.us";
 	public static final String adminPassword = "P99Soft.com";
@@ -26,6 +28,8 @@ public class Constants extends TestAction{
 	public static final String Persona2 = "IT Leadership";
 	public static final String Persona3 = "Admin";
 	public static final String PreferenceDay1 = "Monday";
+	public static final String PreferenceDay2 = "Tuesday";
+	public static final String PreferenceDay3 = "Wednesday";
 	
 	//Team type
 	

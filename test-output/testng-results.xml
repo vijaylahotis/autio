@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-04T17:24:12 IST" name="Default suite" finished-at="2023-08-04T17:26:47 IST" duration-ms="155566">
+  <suite started-at="2023-08-07T18:10:30 IST" name="Default suite" finished-at="2023-08-07T18:12:47 IST" duration-ms="136894">
     <groups>
     </groups>
-    <test started-at="2023-08-04T17:24:12 IST" name="Default test" finished-at="2023-08-04T17:26:47 IST" duration-ms="155566">
+    <test started-at="2023-08-07T18:10:30 IST" name="Default test" finished-at="2023-08-07T18:12:47 IST" duration-ms="136894">
       <class name="AdminModuleTestScripts.AdminModule">
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@47eaca72]" started-at="2023-08-04T17:24:12 IST" name="initializeChrome" finished-at="2023-08-04T17:24:14 IST" duration-ms="2059" status="PASS">
+        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@47eaca72]" started-at="2023-08-07T18:10:31 IST" name="initializeChrome" finished-at="2023-08-07T18:10:32 IST" duration-ms="1619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateUser()[pri:0, instance:AdminModuleTestScripts.AdminModule@47eaca72]" started-at="2023-08-04T17:24:14 IST" name="CreateUser" description="This testcase verifies to create a User" finished-at="2023-08-04T17:26:47 IST" duration-ms="153184" status="PASS">
+        <test-method signature="CreateUser()[pri:0, instance:AdminModuleTestScripts.AdminModule@47eaca72]" started-at="2023-08-07T18:10:32 IST" name="CreateUser" description="This testcase verifies to create a User" finished-at="2023-08-07T18:12:47 IST" duration-ms="135029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateUser -->

@@ -14,7 +14,7 @@ public class TeamTypePageObjects extends TestAction{
 		// TODO Auto-generated constructor stub
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-	} 
+	           } 
 	
 	@FindBy(xpath="//*[@id=\"root\"]/div[2]/div/div[1]/aside/div/ul/li[4]/div")
     public WebElement Team; 
@@ -28,7 +28,7 @@ public class TeamTypePageObjects extends TestAction{
 	@FindBy(xpath="//*[text()='Team Type']")
 	public WebElement TeamsType;
 	
-	@FindBy(xpath="//button[@class=\"ant-btn css-19gw05y ant-btn-primary\"]")
+	@FindBy(xpath="//*[text()='Create Team Type']")
 	public WebElement CreateTeamType;
 	
 	@FindBy(xpath="//input[@id=\"nest-messages_name\"]")
@@ -41,12 +41,12 @@ public class TeamTypePageObjects extends TestAction{
     public WebElement Click_Submit;
 
 	public void clickEnterDetails(String Name, String Description) throws InterruptedException {
-		this.click(Teams);
-		this.click(TeamsType);
-		this.click(CreateTeamType);
-		this.sendkeys(Enter_Name, Name);
-        this.sendkeys(Enter_Description, Description);
-        this.click(Click_Submit);
+	this.click(Teams);
+	this.click(TeamsType);
+	this.click(CreateTeamType);
+	this.sendkeys(Enter_Name, Name);
+    this.sendkeys(Enter_Description, Description);
+    this.click(Click_Submit);
 
 	}
 }
