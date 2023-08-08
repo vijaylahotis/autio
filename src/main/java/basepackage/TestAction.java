@@ -52,6 +52,7 @@ public class TestAction {
 	
 	public void click(WebElement element) {
 		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
 			System.out.println("successfully click on the element " + element);
 			log.info("successfully click on the element"+element);
 			waitForEle(element).click();

@@ -51,13 +51,18 @@ public class UserCreationPageObjects extends TestAction {
     public WebElement weeklybasedemail;
      
     
-    @FindBy(xpath="//*[@id=\"nest-messages_preference_day\"]")
+    @FindBy(xpath="//input[@id='nest-messages_preference_day']")
 	public WebElement preferenceday;
+    
+    //@FindBy(xpath="//span[text()='Select Days']")
+	//public WebElement preferenceday;
+    
     
     String PreferenceDay="//div[@title='#']";
     
     @FindBy(xpath="//*[text()='Manage Users']")
     public WebElement text_manageusers;
+    
 
     public void clickOnUsers() {
 	this.click(User1);
@@ -85,9 +90,12 @@ public class UserCreationPageObjects extends TestAction {
 		}
 	}
 	
-	public void clickOnEmails() {
+	public void clickOnEmails() throws InterruptedException {
 		this.click(eventbasedemail);
+		Thread.sleep(2000);
 		this.click(weeklybasedemail);
+		Thread.sleep(2000);
+
 }
 	
 	public void selectPreference(String txtPreferenceDay) {

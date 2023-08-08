@@ -14,9 +14,9 @@ import basepackage.TestAction;
 
 
 @SuppressWarnings("unused")
-public class TeamTypePageObjects extends TestAction{
+public class TeamLevelPageObjects extends TestAction{
 	WebDriver  driver;
-	public TeamTypePageObjects(WebDriver driver) {
+	public TeamLevelPageObjects(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 		this.driver=driver;
@@ -29,31 +29,36 @@ public class TeamTypePageObjects extends TestAction{
 	@FindBy(xpath="//*[text()='Teams']")
 	public WebElement Teams;
 	
-	@FindBy(xpath="//*[@id=\"rc-menu-uuid-76919-3-teams-popup\"]/li[2]/span")
-    public WebElement TeamType; 
+	@FindBy(xpath="//*[@id=\"rc-menu-uuid-57814-4-teams-popup\"]/li[1]")
+    public WebElement TeamLevel; 
 	
-	@FindBy(xpath="//*[text()='Team Type']")
-	public WebElement TeamsType;
+	@FindBy(xpath="//*[text()='Team Level']")
+	public WebElement TeamsLevel;
 	
-	@FindBy(xpath="//*[text()='Create Team Type']")
-	public WebElement CreateTeamType;
+	@FindBy(xpath="//*[text()='Create Team Level']")
+	public WebElement CreateTeamLevel;
+	
+	@FindBy(xpath="//label[@title='Level Number']")
+	WebElement levelnumberText;
 	
 	@FindBy(xpath="//input[@id=\"nest-messages_name\"]")
     public WebElement Enter_Name; 
 	
-	@FindBy(xpath="//input[@id=\"nest-messages_description\"]")
-    public WebElement Enter_Description; 
-	
 	@FindBy(xpath="//button[@type=\"submit\"]")
     public WebElement Click_Submit;
+	
+	public void clickEnterDetails(String LevelName) throws InterruptedException {
+		this.click(Teams);
+		this.click(TeamsLevel);
+		this.click(CreateTeamLevel);
+		this.sendkeys(Enter_Name, LevelName);
+	    this.click(Click_Submit);
 
-	public void clickEnterDetails(String Name, String Description) throws InterruptedException {
-	this.click(Teams);
-	this.click(TeamsType);
-	this.click(CreateTeamType);
-	this.sendkeys(Enter_Name, Name);
-    this.sendkeys(Enter_Description, Description);
-    this.click(Click_Submit);
-
+		}
+	
+	public String isLevelNumberTextDisplayed( ) {
+		String LevelNumberText= levelnumberText.getText();
+    	return LevelNumberText;
 	}
+	
 }

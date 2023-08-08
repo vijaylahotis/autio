@@ -35,6 +35,7 @@ public class TestBase {
 		 * driver.manage().window().maximize();
 		 */
 	}
+	
 	public void captureScreen(String testCaseName) throws IOException
 	{
 		TakesScreenshot ts=(TakesScreenshot) driver;//typecasting 

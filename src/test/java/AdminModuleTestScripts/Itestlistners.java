@@ -6,7 +6,6 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -18,7 +17,6 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import basepackage.TestBase;
 
 
 @SuppressWarnings("unused")
@@ -42,15 +40,16 @@ public class Itestlistners extends AdminModule implements ITestListener {
 		htmlReporter.config().setTheme(Theme.DARK);
 	}
 	
-//	public void captureScreen(String testCaseName) throws IOException
-//	{
-//		TakesScreenshot ts=(TakesScreenshot) driver;//typecasting 
-//		File source =ts.getScreenshotAs(OutputType.FILE);//it will take screen shot 
-//		String destinationFile = System.getProperty("user.dir")+"/Screenshots/"+testCaseName+".png";
-//		
-//		//for fileutils class u need to add dependecy of commans.io
-//		FileUtils.copyFile(source,new File(destinationFile));
-//	}
+	
+	public void captureScreen(String testCaseName) throws IOException
+	{
+		TakesScreenshot ts=(TakesScreenshot) driver;//typecasting 
+		File source =ts.getScreenshotAs(OutputType.FILE);//it will take screen shot 
+		String destinationFile = System.getProperty("user.dir")+"/Screenshots/"+testCaseName+".png";
+		
+		//for fileutils class u need to add dependecy of commans.io
+		FileUtils.copyFile(source,new File(destinationFile));
+	}
 	
 	@Override
 	public void onFinish(ITestContext Result) {

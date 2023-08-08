@@ -19,7 +19,7 @@ public class Constants extends TestAction{
 	public static final String adminEmail = "nagendra@bsaas.us";
 	public static final String adminPassword = "P99Soft.com";
 	
-	//User Creation
+	// User Creation
 	
 	public static final String Person1 = "Shaheed Khan";
 	public static final String Person2 = "Krishna Kumar";
@@ -31,8 +31,13 @@ public class Constants extends TestAction{
 	public static final String PreferenceDay2 = "Tuesday";
 	public static final String PreferenceDay3 = "Wednesday";
 	
-	//Team type
+	// Team type
 	
 	public static final String Name1 = "Devops";
 	public static final String Description1 = "Creating team type";
+	
+	// Team level
+	
+	public static final String LevelName1 = "Corporate";
+	
 }
