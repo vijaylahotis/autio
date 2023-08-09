@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -122,16 +121,6 @@ public class TestAction {
 		return sb.toString();
 	}
 	
-	public static String generateRandomRegionName(int length) {
-		StringBuilder sb = new StringBuilder(length);
-		sb.append("Location");
-		for (int i = 0; i < length; i++) {
-			int randomIndex = RANDOM.nextInt(CAPITAL_CHARACTERS.length());
-			char randomChar = CAPITAL_CHARACTERS.charAt(randomIndex);
-			sb.append(randomChar);
-		}
-		return sb.toString();
-	}
 	
 	public void selectDropdownOptions(List<WebElement> listOfElement,String dropdownElement ) {
 		for (WebElement liElement : listOfElement) {
@@ -305,6 +294,48 @@ public class TestAction {
                 throw e;
             } catch (Exception e) {
                // logger.warn("Error selecting the element " + e.getMessage());
+                throw e;
+            }
+        }
+        
+        public void sendKeys(WebElement element, String text, boolean logInputText) throws Exception {
+            try {
+                if (logInputText)
+                //    logger.info("Setting text " + text + " in element " + element);
+                element.clear();
+                element.sendKeys(text);
+            } catch (NoSuchElementException e) {
+              //  logger.warn("Failed to send keys " + e.getMessage());
+                throw e;
+            } catch (Exception e) {
+              //  logger.warn("Failed to send keys " + e.getMessage());
+                throw e;
+            }
+        }
+        
+     // @Step("Wait and switch to Iframe {text}")
+        protected void clearTextbox(WebElement element) throws Exception {
+            try {
+          //      logger.info("Clear Text" + " in element " + element);
+                element.clear();
+            } catch (NoSuchElementException e) {
+           //     logger.warn("Failed to clear text " + e.getMessage());
+                throw e;
+            } catch (Exception e) {
+           //     logger.warn("Failed to clear Tex " + e.getMessage());
+                throw e;
+            }
+        }
+        
+        public void clickUsingDynamicJavaScriptExecutor(String element, String txtReplace) throws Exception {
+        	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            WebElement el = findDynamicElement(element, txtReplace);
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(el));
+                executor.executeScript("arguments[0].click();", el);
+            } catch (WebDriverException e) {
+               // logger.warn("Failed to click on element " + e.getMessage());
                 throw e;
             }
         }

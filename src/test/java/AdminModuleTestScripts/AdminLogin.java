@@ -13,6 +13,7 @@ import PageObjects.SignInPageObjects;
 
 
 @SuppressWarnings("unused")
+@Listeners({AdminModuleTestScripts.Itestlistners.class})
 public class AdminLogin extends TestBase{
 	public SignInPageObjects sign ;
 
@@ -25,7 +26,8 @@ public class AdminLogin extends TestBase{
 		public void verifysigninFunctionality() throws InterruptedException {
 			sign= new SignInPageObjects(driver);
 			sign.adminsign();
-			
+			Thread.sleep(2000);
 		    Assert.assertEquals(ExpectedValue.Run,sign.isRunNightJobsDisplayed());
+		    Thread.sleep(2000);
 		}
 }

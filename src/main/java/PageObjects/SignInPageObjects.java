@@ -9,7 +9,6 @@ import org.testng.log4testng.Logger;
 import basepackage.TestAction;
 import Utilities.Constants;
 
-@SuppressWarnings("unused")
 public class SignInPageObjects extends TestAction{
 
 	WebDriver driver;

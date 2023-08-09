@@ -73,6 +73,7 @@ public class UserCreationPageObjects extends TestAction {
 	public void selectPerson(String txtPersonName) {
 		try {
 			this.click(Person);
+			this.sendkeys(Person, txtPersonName);
 			this.clickOnDynamicElement(PersonName, txtPersonName);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
