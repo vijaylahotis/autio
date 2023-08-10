@@ -19,7 +19,6 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
-@SuppressWarnings("unused")
 public class Itestlistners extends AdminModule implements ITestListener {
 	public ExtentSparkReporter htmlReporter;
 	public ExtentReports reports;

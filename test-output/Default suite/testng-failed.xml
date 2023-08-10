@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AdminModuleTestScripts.AdminLogin">
+      <class name="AdminModuleTestScripts.AdminModule">
         <methods>
-          <include name="tearDown"/>
           <include name="initializeChrome"/>
-          <include name="verifysigninFunctionality"/>
+          <include name="CreateDefaultRateCard"/>
         </methods>
-      </class> <!-- AdminModuleTestScripts.AdminLogin -->
+      </class> <!-- AdminModuleTestScripts.AdminModule -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

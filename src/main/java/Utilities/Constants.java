@@ -63,4 +63,50 @@ public class Constants extends TestAction{
 	public static final String LocationDescription1 = "Midshore";
 	public static final String LocationName2 = "Farshore";
 	public static final String LocationDescription2 = "Farshore";
+	
+	// Seniority Level
+	
+	public static final String SeniorityName1 = "Fresher";
+	public static final String SeniorityName2 = "Associate";
+	public static final String Expereince1 = "1";
+	public static final String Expereince2 = "15";
+	
+	// Default Rate Card
+	
+	public static final String DefaultLocation1 = "Onshore";
+	public static final String DefaultLocation2 = "Offshore";
+	public static final String DefaultSeniority1 = "Fresher";
+    public static final String DefaultSeniority2 = "Senior";
+    public static final String Role1 = "Java Developer";
+	public static final String Role2 = "QA";
+	public static final String Rate1 = "10000";
+	public static final String Rate2 = "8000";
+	
+	// Service Provider
+	
+	public static final String ServiceProviderName1 = "CTS";
+	public static final String ServiceProviderName2 = "Tech Mahindra";
+	public static final String SPDescription1 = "";
+	public static final String SPDescription2 = "Service Provider";
+	public static final String URL1 = "www.cts.com";
+	public static final String URL2 = "www.techmahindra.com";
+	
+	// Notification
+	
+	public static final String Reminder1 = "CTS";
+	public static final String Escalation1 = "CTS";
+	public static final String Frequency1 = "CTS";
+	
+	// Action Description
+	
+	public static final String Category1 = "Update Team Member";
+	public static final String Category2 = "New Roll-off";
+	public static final String Category3 = "Start Date Passed";
+	public static final String Date1 = "Created Date";
+	public static final String Overdue1 = "4";
+	public static final String Overdue2 = "8";
+	public static final String ActionDescription1 = "Contractor @target.ContractorName rolled off from Azure AD";
+	public static final String ActionDescription2 = "Contractor @target.ContractorName rolled off from Azure AD on @source.DownloadDate";
+	
+	
 }

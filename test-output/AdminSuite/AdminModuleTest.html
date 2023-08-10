@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>AdminModuleTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 07 20:42:09 IST 2023</td>
+<td>Started on:</td><td>Thu Aug 10 18:12:53 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>157 seconds (157600 ms)</td>
+<tr><td>Total time:</td><td>424 seconds (424928 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,58 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='AdminModuleTestScripts.AdminModule.CreateTeamLevel()'><b>CreateTeamLevel</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a TeamLevel</td>
+<td><div><pre>java.lang.AssertionError: expected [Level Number] but found [Don&apos;t Forget]
+	at AdminModuleTestScripts.AdminModule.CreateTeamLevel(AdminModule.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1655182419", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1655182419'><pre>java.lang.AssertionError: expected [Level Number] but found [Don&apos;t Forget]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at AdminModuleTestScripts.AdminModule.CreateTeamLevel(AdminModule.java:81)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>11</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,20 +128,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='AdminModuleTestScripts.AdminModule.CreateTeamType()'><b>CreateTeamType</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a TeamType</td>
-<td></td>
-<td>10</td>
-<td>AdminModuleTestScripts.AdminModule@2aceadd4</td></tr>
-<tr>
 <td title='AdminModuleTestScripts.AdminModule.CreateUser()'><b>CreateUser</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a User</td>
 <td></td>
-<td>134</td>
-<td>AdminModuleTestScripts.AdminModule@2aceadd4</td></tr>
+<td>258</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
 <tr>
 <td title='AdminModuleTestScripts.AdminLogin.verifysigninFunctionality()'><b>verifysigninFunctionality</b><br>Test class: AdminModuleTestScripts.AdminLogin<br>Test method: This testcase verifies to signin</td>
 <td></td>
-<td>8</td>
-<td>AdminModuleTestScripts.AdminLogin@44c03695</td></tr>
+<td>12</td>
+<td>AdminModuleTestScripts.AdminLogin@385c9627</td></tr>
+<tr>
+<td title='AdminModuleTestScripts.AdminModule.CreateActionDescription()'><b>CreateActionDescription</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a action description</td>
+<td></td>
+<td>24</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
+<tr>
+<td title='AdminModuleTestScripts.AdminModule.CreateDefaultRateCard()'><b>CreateDefaultRateCard</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a default rate card</td>
+<td></td>
+<td>21</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
+<tr>
+<td title='AdminModuleTestScripts.AdminModule.CreateLocation()'><b>CreateLocation</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a location</td>
+<td></td>
+<td>13</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
+<tr>
+<td title='AdminModuleTestScripts.AdminModule.CreateNotification()'><b>CreateNotification</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a notification alerts</td>
+<td></td>
+<td>19</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
+<tr>
+<td title='AdminModuleTestScripts.AdminModule.CreateTeamType()'><b>CreateTeamType</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a TeamType</td>
+<td></td>
+<td>13</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
+<tr>
+<td title='AdminModuleTestScripts.AdminModule.MapCountryLocation()'><b>MapCountryLocation</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to map country location</td>
+<td></td>
+<td>17</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
+<tr>
+<td title='AdminModuleTestScripts.AdminModule.CreateServiceProvider()'><b>CreateServiceProvider</b><br>Test class: AdminModuleTestScripts.AdminModule<br>Test method: This testcase verifies to create a service provider</td>
+<td></td>
+<td>19</td>
+<td>AdminModuleTestScripts.AdminModule@710f4dc7</td></tr>
 </table><p>
 </body>
 </html>
