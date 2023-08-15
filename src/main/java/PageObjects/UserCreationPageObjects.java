@@ -51,7 +51,7 @@ public class UserCreationPageObjects extends TestAction {
     public WebElement weeklybasedemail;
      
     
-    @FindBy(xpath="//input[@id='nest-messages_preference_day']")
+    @FindBy(xpath="//div[@id='nest-messages_Notification']/div[2]/div/div/div/div/div/div")
 	public WebElement preferenceday;
     
     //@FindBy(xpath="//span[text()='Select Days']")

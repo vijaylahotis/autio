@@ -1,4 +1,4 @@
-package AdminModuleTestScripts;
+package TestScripts;
 
 import java.time.Duration;
 
@@ -23,12 +23,13 @@ import PageObjects.SeniorityLevelPageObjects;
 import PageObjects.ServiceProviderPageObjects;
 import PageObjects.SignInPageObjects;
 import PageObjects.TeamLevelPageObjects;
+import PageObjects.TeamPageObjects;
 import PageObjects.TeamTypePageObjects;
 import PageObjects.UserCreationPageObjects;
 
 
 @SuppressWarnings("unused")
-@Listeners({AdminModuleTestScripts.Itestlistners.class})
+@Listeners({TestScripts.Itestlistners.class})
 public class AdminModule extends TestBase{
 	
 	public SignInPageObjects SignIn;
@@ -43,6 +44,7 @@ public class AdminModule extends TestBase{
 	public ServiceProviderPageObjects ServiceProvider;
 	public NotificationPageObjects Notification;
 	public ActionDescriptionPageObjects ActionDescription;
+	public TeamPageObjects Team;
 
 	// User Creation
 	
@@ -53,7 +55,7 @@ public class AdminModule extends TestBase{
 		User= new UserCreationPageObjects(driver);
 		User.clickOnUsers();
 		User.selectPerson(Constants.Person4);
-		User.selectPersona(Constants.Persona3);
+		User.selectPersona(Constants.Persona2);
 		User.clickOnEmails();
 		User.selectPreference(Constants.PreferenceDay1);
 
@@ -126,7 +128,7 @@ public class AdminModule extends TestBase{
 		SignIn.adminsign();
 		SeniorityLevel= new SeniorityLevelPageObjects(driver);
 		SeniorityLevel.enterseniorityname(Constants.SeniorityName1);
-		SeniorityLevel.selectexpereince(Constants.Expereince2);
+		SeniorityLevel.selectexpereince(Constants.Expereince1);
 		}
 		
 	// Default Rate Card Creation
@@ -139,7 +141,7 @@ public class AdminModule extends TestBase{
 		DefaultRateCard.clickdetails();
 		DefaultRateCard.selectlocation(Constants.DefaultLocation1);
 		DefaultRateCard.selectseniority(Constants.DefaultSeniority1);
-		//DefaultRateCard.selectrole(Constants.Role1);
+		DefaultRateCard.selectrole(Constants.Role1);
 		DefaultRateCard.enterrate(Constants.Rate1);
 		}
 		
@@ -176,4 +178,20 @@ public class AdminModule extends TestBase{
 		ActionDescription.selectdate(Constants.Date1);
 		ActionDescription.enteroverdue(Constants.Overdue1, Constants.ActionDescription1);
 		}
-}
+	    
+    // Team Creation
+		
+	    @Test(priority=11,description="This testcase verifies to create a team",enabled=true)
+		public void CreateTeam() throws InterruptedException  {
+		SignIn= new SignInPageObjects(driver);
+		SignIn.adminsign();
+		Team= new TeamPageObjects(driver);
+		Team.clickteamdetails();
+		Team.selectteamlevel(Constants.Teamlevel1);
+		Team.selectparentteam(Constants.Parentteam1);
+		Team.enterteamname(Constants.Teamname1);
+		Team.selectteamleader(Constants.Teamleader1);
+		Team.selectteamtype(Constants.Teamtype1);
+		Team.selectdetails();
+		}
+	    }

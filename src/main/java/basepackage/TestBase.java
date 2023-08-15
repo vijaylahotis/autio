@@ -28,6 +28,7 @@ public class TestBase {
 		driver = new ChromeDriver(option);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		driver.navigate().refresh();
 		
 		/*
 		 * WebDriverManager.edgedriver().setup(); WebDriver driver = new EdgeDriver();

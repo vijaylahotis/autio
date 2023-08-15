@@ -16,7 +16,7 @@ public class Constants extends TestAction{
 	// Login Credentials
 	
 	public static final String URL = "https://dev.talentsavvy.com/login";
-	public static final String adminEmail = "nagendra@bsaas.us";
+	public static final String adminEmail = "mahesh@bsaas.us";
 	public static final String adminPassword = "P99Soft.com";
 	
 	// User Creation
@@ -24,7 +24,7 @@ public class Constants extends TestAction{
 	public static final String Person1 = "Shaheed Khan";
 	public static final String Person2 = "Krishna Kumar";
 	public static final String Person3 = "Vikram Khot";
-	public static final String Person4 = "F-009 L-009";
+	public static final String Person4 = "Tina Fey";
 	public static final String Persona1 = "Hiring Manager";
 	public static final String Persona2 = "IT Leadership";
 	public static final String Persona3 = "Admin";
@@ -107,6 +107,21 @@ public class Constants extends TestAction{
 	public static final String Overdue2 = "8";
 	public static final String ActionDescription1 = "Contractor @target.ContractorName rolled off from Azure AD";
 	public static final String ActionDescription2 = "Contractor @target.ContractorName rolled off from Azure AD on @source.DownloadDate";
+	
+	// Team
+	
+	public static final String Teamlevel1 = "5 - Corporate";
+	public static final String Teamlevel2 = "3 - Business Unit";
+	public static final String Parentteam1 = "Finance";
+	public static final String Parentteam2 = "Global Enterprise";
+	public static final String Teamname1 = "Insurer";
+	public static final String Teamname2 = "Shipper";
+	public static final String Teamleader1 = "Ana de Armas";
+	public static final String Teamleader2 = "Dora Samuels";
+	public static final String Teamtype1 = "Grow";
+	public static final String Teamtype2 = "Run";
+	
+	
 	
 	
 }

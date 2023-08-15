@@ -1,4 +1,4 @@
-package AdminModuleTestScripts;
+package TestScripts;
 
 import java.io.File;
 import java.io.IOException;

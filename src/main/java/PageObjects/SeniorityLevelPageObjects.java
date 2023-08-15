@@ -62,7 +62,7 @@ public class SeniorityLevelPageObjects extends TestAction {
 			//Actions actions = new Actions(driver);
 	        //actions.moveToElement(Exp1).click().build().perform();
 		   this.clickOnDynamicElement(Experience, txtExperience);
-			this.click(clicksubmit);
+		   this.click(clicksubmit);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,137 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-10T18:12:53 IST" name="AdminSuite" finished-at="2023-08-10T18:19:58 IST" duration-ms="424928">
+  <suite started-at="2023-08-15T19:31:32 IST" name="Default suite" finished-at="2023-08-15T19:31:44 IST" duration-ms="12792">
     <groups>
     </groups>
-    <test started-at="2023-08-10T18:12:53 IST" name="AdminModuleTest" finished-at="2023-08-10T18:19:58 IST" duration-ms="424928">
-      <class name="AdminModuleTestScripts.AdminModule">
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:13:08 IST" name="initializeChrome" finished-at="2023-08-10T18:13:09 IST" duration-ms="841" status="PASS">
+    <test started-at="2023-08-15T19:31:32 IST" name="Default test" finished-at="2023-08-15T19:31:44 IST" duration-ms="12792">
+      <class name="TestScripts.RegressionTests">
+        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:TestScripts.RegressionTests@5656be13]" started-at="2023-08-15T19:31:32 IST" name="initializeChrome" finished-at="2023-08-15T19:31:34 IST" duration-ms="1692" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateUser()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:13:09 IST" name="CreateUser" description="This testcase verifies to create a User" finished-at="2023-08-10T18:17:28 IST" duration-ms="258959" status="PASS">
+        <test-method signature="Moveteammember1()[pri:6, instance:TestScripts.RegressionTests@5656be13]" started-at="2023-08-15T19:31:34 IST" name="Moveteammember1" description="This testcase verifies to move a member" finished-at="2023-08-15T19:31:44 IST" duration-ms="10878" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateUser -->
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:17:28 IST" name="initializeChrome" finished-at="2023-08-10T18:17:29 IST" duration-ms="939" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateTeamType()[pri:1, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:17:29 IST" name="CreateTeamType" description="This testcase verifies to create a TeamType" finished-at="2023-08-10T18:17:42 IST" duration-ms="13569" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateTeamType -->
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:17:42 IST" name="initializeChrome" finished-at="2023-08-10T18:17:43 IST" duration-ms="985" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateTeamLevel()[pri:2, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:17:43 IST" name="CreateTeamLevel" description="This testcase verifies to create a TeamLevel" finished-at="2023-08-10T18:17:54 IST" duration-ms="11144" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Level Number] but found [Don't Forget]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Level Number] but found [Don't Forget]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at AdminModuleTestScripts.AdminModule.CreateTeamLevel(AdminModule.java:81)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateTeamLevel -->
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:17:55 IST" name="initializeChrome" finished-at="2023-08-10T18:17:56 IST" duration-ms="1102" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="MapCountryLocation()[pri:4, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:17:56 IST" name="MapCountryLocation" description="This testcase verifies to map country location" finished-at="2023-08-10T18:18:13 IST" duration-ms="17701" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MapCountryLocation -->
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:18:13 IST" name="initializeChrome" finished-at="2023-08-10T18:18:15 IST" duration-ms="1184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateLocation()[pri:5, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:18:15 IST" name="CreateLocation" description="This testcase verifies to create a location" finished-at="2023-08-10T18:18:28 IST" duration-ms="13436" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateLocation -->
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:18:28 IST" name="initializeChrome" finished-at="2023-08-10T18:18:29 IST" duration-ms="1188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateDefaultRateCard()[pri:7, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:18:29 IST" name="CreateDefaultRateCard" description="This testcase verifies to create a default rate card" finished-at="2023-08-10T18:18:50 IST" duration-ms="21260" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateDefaultRateCard -->
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:18:50 IST" name="initializeChrome" finished-at="2023-08-10T18:18:51 IST" duration-ms="1002" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateServiceProvider()[pri:8, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:18:51 IST" name="CreateServiceProvider" description="This testcase verifies to create a service provider" finished-at="2023-08-10T18:19:11 IST" duration-ms="19933" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateServiceProvider -->
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:19:11 IST" name="initializeChrome" finished-at="2023-08-10T18:19:12 IST" duration-ms="1057" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateNotification()[pri:9, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:19:12 IST" name="CreateNotification" description="This testcase verifies to create a notification alerts" finished-at="2023-08-10T18:19:32 IST" duration-ms="19799" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateNotification -->
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:19:32 IST" name="initializeChrome" finished-at="2023-08-10T18:19:33 IST" duration-ms="973" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateActionDescription()[pri:10, instance:AdminModuleTestScripts.AdminModule@710f4dc7]" started-at="2023-08-10T18:19:33 IST" name="CreateActionDescription" description="This testcase verifies to create a action description" finished-at="2023-08-10T18:19:58 IST" duration-ms="24856" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateActionDescription -->
-      </class> <!-- AdminModuleTestScripts.AdminModule -->
-      <class name="AdminModuleTestScripts.AdminLogin">
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:AdminModuleTestScripts.AdminLogin@385c9627]" started-at="2023-08-10T18:12:53 IST" name="initializeChrome" finished-at="2023-08-10T18:12:55 IST" duration-ms="1997" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeChrome -->
-        <test-method signature="verifysigninFunctionality()[pri:0, instance:AdminModuleTestScripts.AdminLogin@385c9627]" started-at="2023-08-10T18:12:55 IST" name="verifysigninFunctionality" description="This testcase verifies to signin" finished-at="2023-08-10T18:13:08 IST" duration-ms="12403" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifysigninFunctionality -->
-      </class> <!-- AdminModuleTestScripts.AdminLogin -->
-    </test> <!-- AdminModuleTest -->
-  </suite> <!-- AdminSuite -->
+        </test-method> <!-- Moveteammember1 -->
+      </class> <!-- TestScripts.RegressionTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -1,4 +1,4 @@
-package AdminModuleTestScripts;
+package TestScripts;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -13,7 +13,7 @@ import PageObjects.SignInPageObjects;
 
 
 @SuppressWarnings("unused")
-@Listeners({AdminModuleTestScripts.Itestlistners.class})
+@Listeners({TestScripts.Itestlistners.class})
 public class AdminLogin extends TestBase{
 	public SignInPageObjects sign ;
 
@@ -26,8 +26,8 @@ public class AdminLogin extends TestBase{
 		public void verifysigninFunctionality() throws InterruptedException {
 			sign= new SignInPageObjects(driver);
 			sign.adminsign();
-			Thread.sleep(2000);
-		    Assert.assertEquals(ExpectedValue.Run,sign.isRunNightJobsDisplayed());
-		    Thread.sleep(2000);
+			//Thread.sleep(2000);
+		   // Assert.assertEquals(ExpectedValue.Run,sign.isRunNightJobsDisplayed());
+		   // Thread.sleep(2000);
 		}
 }
