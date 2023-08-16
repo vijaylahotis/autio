@@ -5,8 +5,8 @@
     <classes>
       <class name="TestScripts.RegressionTests">
         <methods>
-          <include name="CreatePosition"/>
           <include name="initializeChrome"/>
+          <include name="Mergeamember"/>
         </methods>
       </class> <!-- TestScripts.RegressionTests -->
     </classes>

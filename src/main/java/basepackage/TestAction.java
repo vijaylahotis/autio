@@ -33,6 +33,7 @@ public class TestAction {
 	WebDriver driver;
 	private static final String CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	private static final String CAPITAL_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private static final String INTEGERS = "1234567890";
 	private static final SecureRandom RANDOM = new SecureRandom();
 	Logger log = LogManager.getLogger(TestAction.class);
 	
@@ -110,9 +111,9 @@ public class TestAction {
 		return sb.toString();
 	}
 	
-	public static String generateRandomTeam(int length) {
+	public static String generateRandomTeamname(int length) {
 		StringBuilder sb = new StringBuilder(length);
-		sb.append("Team");
+		sb.append("Team-");
 		for (int i = 0; i < length; i++) {
 			int randomIndex = RANDOM.nextInt(CAPITAL_CHARACTERS.length());
 			char randomChar = CAPITAL_CHARACTERS.charAt(randomIndex);
@@ -121,6 +122,38 @@ public class TestAction {
 		return sb.toString();
 	}
 	
+	public static String generateRandommonthlyrate(int length) {
+		StringBuilder sb = new StringBuilder(length);
+		sb.append("1");
+		for (int i = 0; i < length; i++) {
+			int randomIndex = RANDOM.nextInt(INTEGERS.length());
+			char randomChar = INTEGERS.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
+	
+	public static String generateRandomexperience(int length) {
+		StringBuilder sb = new StringBuilder(length);
+		sb.append("1");
+		for (int i = 0; i < length; i++) {
+			int randomIndex = RANDOM.nextInt(INTEGERS.length());
+			char randomChar = INTEGERS.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
+	
+	public static String generateRandomtenure(int length) {
+		StringBuilder sb = new StringBuilder(length);
+		sb.append("1");
+		for (int i = 0; i < length; i++) {
+			int randomIndex = RANDOM.nextInt(INTEGERS.length());
+			char randomChar = INTEGERS.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
 	
 	public void selectDropdownOptions(List<WebElement> listOfElement,String dropdownElement ) {
 		for (WebElement liElement : listOfElement) {

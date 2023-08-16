@@ -37,7 +37,7 @@ public class RegressionTests extends TestBase{
 			Regression= new RegressionPageObjects(driver);
 			Regression.clickteam();
 			Regression.selectgroup(Inputs.Group2);
-			Regression.enterteamname(Inputs.TeamName1);
+			Regression.enterteamname();
 			Regression.selectteamleader(Inputs.TeamLeader1);
 			Regression.selectteamtype(Inputs.TeamType1);
 			Regression.selectdetails();
@@ -52,16 +52,16 @@ public class RegressionTests extends TestBase{
 			Regression= new RegressionPageObjects(driver);
 		    Regression.clickonteamname();
 		//	Regression.createposition1(Inputs.Position1);
-		//	Regression.selectposition1(Inputs.Position1);
+			Regression.selectposition1();
 		//	Regression.createmember1(Inputs.Member1);
+			Regression.selectmember1(Inputs.Member1);
 		//	Regression.savechanges1();
-		//	Regression.actioncancel2(Inputs.Actions1);;
-			Regression.selectposition2(Inputs.Position2);
+			Regression.selectposition2();
 			Regression.selectmember2(Inputs.Member2);
-			Regression.savechanges2();
+		//	Regression.savechanges2();
         }
 		
-	// Cancel a member
+	// Cancel a potential member which is assigned to a position
 		
 	    @Test(priority=2,description="This testcase verifies to cancel a member",enabled=true)
 		public void Cancelmember() throws InterruptedException  {
@@ -72,7 +72,7 @@ public class RegressionTests extends TestBase{
 		    Regression.actioncancel2(Inputs.Actions2);
 	    }
 	 
-   // Assign a member
+   // Assign a new hire to an existing open position
 		
 	    @Test(priority=3,description="This testcase verifies to Assign a member",enabled=true)
 		public void Addamember() throws InterruptedException  {
@@ -83,9 +83,15 @@ public class RegressionTests extends TestBase{
 		    Regression.clickonactions(Inputs.Actions3);
 		    Regression.Selectteampostion1();
 		    Regression.Selectteampostion2();
+		    Regression.entermonthlyrate();
+		    Regression.enterexperience();
+		    Regression.entertenure();
+	//	    Regression.selectCountry(Inputs.Country);
+	//	    Regression.selectProvider(Inputs.Provider);
+		    Regression.clickcreatemember();
 	    }
 	    
- // Merge a member
+ // Merge a new hire with a potential member
 		
 	    @Test(priority=4,description="This testcase verifies to Merge a member",enabled=true)
 		public void Mergeamember() throws InterruptedException  {
@@ -96,6 +102,9 @@ public class RegressionTests extends TestBase{
 		    Regression.clickonactions();
 		    Regression.Mergeteampostion1();
 		    Regression.Mergeteampostion2();
+		    Regression.entermergeexperience();
+		    Regression.entermergetenure();
+		    Regression.clickupdatemember();
 	    }
 	
 	    
