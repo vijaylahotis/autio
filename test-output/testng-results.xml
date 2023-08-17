@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-16T20:39:05 IST" name="Default suite" finished-at="2023-08-16T20:39:21 IST" duration-ms="15720">
+  <suite started-at="2023-08-17T19:17:35 IST" name="Default suite" finished-at="2023-08-17T19:18:14 IST" duration-ms="38497">
     <groups>
     </groups>
-    <test started-at="2023-08-16T20:39:05 IST" name="Default test" finished-at="2023-08-16T20:39:21 IST" duration-ms="15720">
+    <test started-at="2023-08-17T19:17:35 IST" name="Default test" finished-at="2023-08-17T19:18:14 IST" duration-ms="38497">
       <class name="TestScripts.RegressionTests">
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:TestScripts.RegressionTests@5656be13]" started-at="2023-08-16T20:39:06 IST" name="initializeChrome" finished-at="2023-08-16T20:39:07 IST" duration-ms="1620" status="PASS">
+        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:TestScripts.RegressionTests@4218d6a3]" started-at="2023-08-17T19:17:36 IST" name="initializeChrome" finished-at="2023-08-17T19:17:37 IST" duration-ms="1858" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeChrome -->
-        <test-method signature="Mergeamember()[pri:4, instance:TestScripts.RegressionTests@5656be13]" started-at="2023-08-16T20:39:07 IST" name="Mergeamember" description="This testcase verifies to Merge a member" finished-at="2023-08-16T20:39:21 IST" duration-ms="13876" status="PASS">
+        <test-method signature="CreateTeam()[pri:0, instance:TestScripts.RegressionTests@4218d6a3]" started-at="2023-08-17T19:17:37 IST" name="CreateTeam" description="This testcase verifies to create a Team" finished-at="2023-08-17T19:18:14 IST" duration-ms="36382" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Mergeamember -->
+        </test-method> <!-- CreateTeam -->
       </class> <!-- TestScripts.RegressionTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -33,7 +33,7 @@ public class Inputs extends TestAction{
 		
 		public static final String Actions1 = "C450 Contractor";
 		public static final String Actions2 = "F-999 L-002";
-		public static final String Actions3 = "Aantony Dsouza onboarded in Azure AD on @source.HireDate. Please assign Aantony Dsouza to one of your teams";
+		public static final String Actions3 = "Austin Stone onboarded in Azure AD on @source.HireDate. Please assign Austin Stone to one of your teams";
 		
 		public static final String TeamSelect = "SQA Team1";
 		public static final String PositionSelect = "Scrum Master";

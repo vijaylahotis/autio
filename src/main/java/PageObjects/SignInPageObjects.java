@@ -22,11 +22,18 @@ public class SignInPageObjects extends TestAction{
 		PageFactory.initElements(driver, this);
         
             }
+	
+	@FindBy(xpath="//button[@type=\"submit\"]")
+    public WebElement click_signin;
+	
     @FindBy(xpath="//input[@id=\"email\"]")
     public WebElement adminEmail; 
     
     @FindBy(xpath="//button[@type=\"submit\"]")
 	public WebElement Sign;
+    
+    @FindBy(xpath="//input[@id=\"idSIButton9\"]")
+	public WebElement click_SignIn;
     
     @FindBy(xpath="//input[@id=\"i0118\"]")
     public WebElement adminPassword;
@@ -41,7 +48,9 @@ public class SignInPageObjects extends TestAction{
 	public WebElement Run;
     
     
-    public void enterAdminEmail(String adiminemailid) {
+    public void enterAdminEmail(String adiminemailid) throws InterruptedException {
+    this.click(click_signin);
+    Thread.sleep(4000);
     this.sendkeys(adminEmail,adiminemailid);	
 	        }
     
@@ -49,7 +58,9 @@ public class SignInPageObjects extends TestAction{
 	this.click(Sign);
             }
     
-	public void enterAdminPassword(String adminpassword) {
+	public void enterAdminPassword(String adminpassword) throws InterruptedException {
+	this.click(click_SignIn);
+	Thread.sleep(4000);
 	this.sendkeys(adminPassword,adminpassword);
             }
 	
@@ -66,7 +77,7 @@ public class SignInPageObjects extends TestAction{
 	    	return RunNightJobs;
 		    }
 	
-	public void adminsign() {
+	public void adminsign() throws InterruptedException {
 	navigateUrl(Constants.URL) ; 
 	enterAdminEmail(Constants.adminEmail); 
 	clickOnSign();

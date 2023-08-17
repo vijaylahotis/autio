@@ -74,15 +74,13 @@ public class RegressionPageObjects extends TestAction{
 	
 	// Position 1 & Member 1
 	
-	@FindBy(xpath="//*[text()='SQA Team1']")
+	@FindBy(xpath="//*[text()='Team-AR']")
     public WebElement click_teamname;
 	
 	
 	@FindBy(xpath="(//div[contains(@class, 'ag-cell-value')][@col-id='role_name'])[1]")
     public WebElement click_role_row1;
-	
-	@FindBy(xpath="//div[@class='ag-cell ag-cell-normal-height ag-cell-value ag-cell-focus ag-cell-not-inline-editing']")
-    public WebElement click_role_row3;
+
 	
 	@FindBy(xpath="//*[text()='UX']")
     public WebElement click_selectposition1;
@@ -151,19 +149,19 @@ public class RegressionPageObjects extends TestAction{
 	
 	String Actions3="//*[text()='#']";
 	
-	@FindBy(xpath="//*[contains(text(), 'Sarfraz Khan onboarded in Azure AD on @source.HireDate. Please assign Sarfraz Khan to one of your teams')]")
-    public WebElement click_a1;
+	// @FindBy(xpath="//*[contains(text(), 'Aiden Markram onboarded in Azure AD on @source.HireDate. Please assign Aiden Markram to one of your teams')]")
+   // public WebElement click_a1;
 	
-	@FindBy(xpath="(//div[@class='ant-select ant-cascader ant-select-in-form-item css-byeoj0 ant-select-single ant-select-allow-clear ant-select-show-arrow'])[3]")
+	@FindBy(xpath="(//div[@class='ant-select ant-cascader ant-select-in-form-item css-byeoj0 ant-select-single ant-select-allow-clear ant-select-show-arrow'])[1]")
     public WebElement click_addnewmember;
 	
-	@FindBy(xpath="(//*[text()='SQA Team1'])[3]")
+	@FindBy(xpath="//*[@title='SQA Team1']")
     public WebElement click_selectteam;
 	
-	@FindBy(xpath="(//*[text()='.Net Developer'])[2]")
+	@FindBy(xpath="(//*[text()='Java Developer'])[2]")
     public WebElement click_selectposition;
 	
-	@FindBy(xpath="(//button[span[text()='Add New Member']])[2]")
+	@FindBy(xpath="(//button[span[text()='Add New Member']])[1]")
     public WebElement click_addmember;
 	
 	@FindBy(xpath="//input[@id='monthly_rate']")
@@ -196,19 +194,19 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
     public WebElement click_actionrequired4;
 	
-	@FindBy(xpath="//*[text()='Aalbert Dominic onboarded in Azure AD on @source.HireDate. Please assign Aalbert Dominic to one of your teams']")
+	@FindBy(xpath="//*[text()='Alexander Dsouza onboarded in Azure AD on @source.HireDate. Please assign Alexander Dsouza to one of your teams']")
     public WebElement click_newhire;
 	
-	@FindBy(xpath="(//div[@class='ant-select ant-cascader ant-select-in-form-item css-byeoj0 ant-select-single ant-select-allow-clear ant-select-show-arrow'])[4]")
+	@FindBy(xpath="(//div[@class='ant-select ant-cascader ant-select-in-form-item css-byeoj0 ant-select-single ant-select-allow-clear ant-select-show-arrow'])[2]")
     public WebElement click_mergeteammember;
 	
-	@FindBy(xpath="(//*[text()='SQA Team'])[2]")
+	@FindBy(xpath="//*[@title='SQA Team']")
     public WebElement click_mergeselectteam;
 	
-	@FindBy(xpath="(//*[text()='Anirudh Reddy'])[3]")
+	@FindBy(xpath="(//*[text()='Bilal Ahmed'])[3]")
     public WebElement click_mergeselectposition;
 	
-	@FindBy(xpath="(//button[@class='ant-btn css-byeoj0 ant-btn-primary' and span[text()='Merge']])[2]")
+	@FindBy(xpath="(//button[@class='ant-btn css-byeoj0 ant-btn-primary' and span[text()='Merge']])[1]")
     public WebElement click_mergebutton;
 	
 	@FindBy(xpath="//input[@id='experience']")
@@ -228,7 +226,7 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="(//*[text()='Confirm Move Team Member'])[2]")
 	 public WebElement click_moveteammember;
 		
-    @FindBy(xpath="(//input[@id='formCreateRecord_date'])[2]")
+    @FindBy(xpath="(//input[@id='formCreateRecord_date'])[3]")
 	 public WebElement click_selectdate;
 		
 	@FindBy(xpath="//*[@title='2023-08-14']")
@@ -243,13 +241,13 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
 	public WebElement click_actionrequired6;
 			
-	@FindBy(xpath="(//*[text()='Confirm Move Team Member'])[3]")
+	@FindBy(xpath="(//*[text()='Confirm Move Team Member'])[2]")
 	public WebElement click_moveteammember1;
 			
 	@FindBy(xpath="(//input[@id='formCreateRecord_date'])[3]")
     public WebElement click_selectdate1;
 			
-	@FindBy(xpath="//*[@title='2023-08-17']")
+	@FindBy(xpath="//*[@title='2023-08-18']")
 	public WebElement select_date1;
 		
 	@FindBy(xpath="(//button[@class='ant-btn css-byeoj0 ant-btn-primary' and @hidden and span[text()='Confirm']])[3]")
@@ -274,7 +272,7 @@ public class RegressionPageObjects extends TestAction{
 	}
 	
 	public void enterteamname() throws InterruptedException {
-		String randomTeamName = generateRandomTeamname(2); // Specify the desired length
+		String randomTeamName = generateRandomTeamname(5); // Specify the desired length
 		enter_teamname.sendKeys(randomTeamName);
 	}
 	
@@ -349,7 +347,11 @@ public class RegressionPageObjects extends TestAction{
 	public void createmember1(String MemberName) throws InterruptedException {
 		Actions actions = new Actions(driver);
 		actions.doubleClick(click_member_row1).perform();
-		this.sendkeys(click_member_row1, MemberName);
+		JavascriptExecutor jse = (JavascriptExecutor)driver; 
+		 System.out.println("MemberName is" +MemberName);
+		 jse.executeScript("arguments[0].removeAttribute('disabled')", click_member_row1);
+		 jse.executeScript("arguments[0].value = '+MemberName';", click_member_row1);
+		//this.sendkeys(click_member_row1, MemberName);
 	}
 	
 	public void selectmember1(String txtMember1) {

@@ -31,7 +31,7 @@ public class RegressionTests extends TestBase{
 	// Team Creation
 	
 		@Test(priority=0,description="This testcase verifies to create a Team",enabled=true)
-		public void CreateUser() throws InterruptedException  {
+		public void CreateTeam() throws InterruptedException  {
 			SignIn= new SignInPageObjects(driver);
 			SignIn.adminsign();
 			Regression= new RegressionPageObjects(driver);
@@ -43,28 +43,42 @@ public class RegressionTests extends TestBase{
 			Regression.selectdetails();
 		}
 			
-	// Position & Member Assigning
+   // Position & Member Selection and Assigning
 			
 		@Test(priority=1,description="This testcase verifies to assign a position and member",enabled=true)
-		public void CreatePosition() throws InterruptedException  {
+		public void SelectPositionMember() throws InterruptedException  {
 			SignIn= new SignInPageObjects(driver);
 			SignIn.adminsign();		
 			Regression= new RegressionPageObjects(driver);
 		    Regression.clickonteamname();
-		//	Regression.createposition1(Inputs.Position1);
 			Regression.selectposition1();
-		//	Regression.createmember1(Inputs.Member1);
 			Regression.selectmember1(Inputs.Member1);
-		//	Regression.savechanges1();
+			Regression.savechanges1();
 			Regression.selectposition2();
 			Regression.selectmember2(Inputs.Member2);
 		//	Regression.savechanges2();
         }
 		
-	// Cancel a potential member which is assigned to a position
 		
-	    @Test(priority=2,description="This testcase verifies to cancel a member",enabled=true)
-		public void Cancelmember() throws InterruptedException  {
+   // Position & Member Creation and Assigning
+		
+		@Test(priority=2,description="This testcase verifies to create a position and member",enabled=true)
+		public void CreatePositionMember() throws InterruptedException  {
+			SignIn= new SignInPageObjects(driver);
+			SignIn.adminsign();		
+			Regression= new RegressionPageObjects(driver);
+			Regression.clickonteamname();
+			Regression.createposition1(Inputs.Position1);
+			Regression.createmember1(Inputs.Member1);
+			Regression.savechanges1();
+		
+		 }
+				
+				
+   // Cancel a potential member which is assigned to a position
+		
+	    @Test(priority=3,description="This testcase verifies to cancel a member",enabled=true)
+		public void Cancelpotentialmember() throws InterruptedException  {
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
 		    Regression= new RegressionPageObjects(driver);
@@ -74,8 +88,8 @@ public class RegressionTests extends TestBase{
 	 
    // Assign a new hire to an existing open position
 		
-	    @Test(priority=3,description="This testcase verifies to Assign a member",enabled=true)
-		public void Addamember() throws InterruptedException  {
+	    @Test(priority=4,description="This testcase verifies to Assign a member",enabled=true)
+		public void AssignNewHire() throws InterruptedException  {
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
 		    Regression= new RegressionPageObjects(driver);
@@ -91,10 +105,10 @@ public class RegressionTests extends TestBase{
 		    Regression.clickcreatemember();
 	    }
 	    
- // Merge a new hire with a potential member
+   // Merge a new hire with a potential member
 		
-	    @Test(priority=4,description="This testcase verifies to Merge a member",enabled=true)
-		public void Mergeamember() throws InterruptedException  {
+	    @Test(priority=5,description="This testcase verifies to Merge a member",enabled=true)
+		public void MergeNewHire() throws InterruptedException  {
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
 		    Regression= new RegressionPageObjects(driver);
@@ -108,9 +122,9 @@ public class RegressionTests extends TestBase{
 	    }
 	
 	    
- // Move a member past or current date
+   // Move a member past or current date
 		
-	    @Test(priority=5,description="This testcase verifies to move a member",enabled=true)
+	    @Test(priority=6,description="This testcase verifies to move a member",enabled=true)
 		public void Moveteammember() throws InterruptedException  {
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
@@ -120,9 +134,9 @@ public class RegressionTests extends TestBase{
 	    }
 	    
 	    
-// Move a member future date
+  // Move a member future date
 		
-	    @Test(priority=6,description="This testcase verifies to move a member",enabled=true)
+	    @Test(priority=7,description="This testcase verifies to move a member",enabled=true)
 		public void Moveteammember1() throws InterruptedException  {
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
