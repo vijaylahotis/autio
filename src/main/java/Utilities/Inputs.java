@@ -13,6 +13,12 @@ public class Inputs extends TestAction{
 	super(driver);
 	}
 	
+	// Login Credentials
+	
+	public static final String URL = "https://dev.talentsavvy.com/login";
+	public static final String HiringEmail = "mahesh@bsaas.us";
+	public static final String HiringPassword = "P99Soft.com";
+	
 	// Team
 	 
 	    public static final String Group1 = "Lending";
@@ -24,23 +30,28 @@ public class Inputs extends TestAction{
 		
 	// Member Selection	
 		
-		public static final String Position1 = "Analyst";
-		public static final String Member1 = "Anatoli Abadd";
-		public static final String Position2 = "QA";
-		public static final String Member2 = "C-003 Contractor";
+		public static final String Position1 = "Java Developer";
+		public static final String Member1 = "A-01 B-01";
+		public static final String Position2 = "React Developer";
+		public static final String Member2 = "A-02 B-02";
+		public static final String Member3 = "A-03 B-03";
 		
    // Actions
 		
 		public static final String Actions1 = "C450 Contractor";
-		public static final String Actions2 = "F-999 L-002";
-		public static final String Actions3 = "Austin Stone onboarded in Azure AD on @source.HireDate. Please assign Austin Stone to one of your teams";
+		public static final String Actions2 = "A-02 B-02";
+		public static final String Actions3 = "null null onboarded in Azure AD on @source.HireDate. Please assign null null to one of your teams";
 		
-		public static final String TeamSelect = "SQA Team1";
-		public static final String PositionSelect = "Scrum Master";
+	
 	
    // New hire assign
 		
 		public static final String Country = "United States";
 		public static final String Provider = "TCS";
+		
+   // Azure User Creation
+		
+		public static final String EmployeeType = "Contractor";
+		public static final String Manager = "Mahesh";
 		
 }

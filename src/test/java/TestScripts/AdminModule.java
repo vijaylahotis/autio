@@ -91,10 +91,6 @@ public class AdminModule extends TestBase{
 		SignIn.adminsign();
 		RunJob= new RunNightJobsPageObjects(driver);
 		RunJob.clickOnimportpersondata();
-		Thread.sleep(3000);
-		RunJob.selectjob(Constants.Jobs);
-		RunJob.clickOnprocessimportdata();
-		Thread.sleep(3000);
 		}
 		
 	// Map Country Location Creation

@@ -32,18 +32,28 @@ public class RunNightJobsPageObjects extends TestAction{
 	@FindBy(xpath="//*[text()='Import Person Data']")
 	public WebElement selectimportpersondata;
 	
+	@FindBy(xpath="(//div[text()='Process Import Data'])[2]")
+	public WebElement selectprocessimportdata;
+	
 	String JobName="//div[@title='Process Import Data']";
 	
 	//@FindBy(xpath="//*[text()='Teams']")
 	// public WebElement Teams;
 	
 	
-	public void clickOnimportpersondata() {
+	public void clickOnimportpersondata() throws InterruptedException {
 		this.click(RunJob);
+		Thread.sleep(30000);
+		this.click(selectimportpersondata);
+		this.click(selectprocessimportdata);
+		Thread.sleep(5000);
+		this.click(RunJob);
+		Thread.sleep(5000);
+
 		
 	}
 		
-	public void selectjob(String txtJobName) {
+	/*public void selectjob(String txtJobName) {
 		try {
 			this.click(selectimportpersondata);
 			this.clickOnDynamicElement(JobName, txtJobName);
@@ -56,6 +66,6 @@ public class RunNightJobsPageObjects extends TestAction{
 	public void clickOnprocessimportdata() {
 		this.click(RunJob);
 		
-	}
+	}*/
 	
 }

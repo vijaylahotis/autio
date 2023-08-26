@@ -16,7 +16,7 @@ public class Constants extends TestAction{
 	// Login Credentials
 	
 	public static final String URL = "https://dev.talentsavvy.com/login";
-	public static final String adminEmail = "mahesh@bsaas.us";
+	public static final String adminEmail = "tony@bsaas.us";
 	public static final String adminPassword = "P99Soft.com";
 	
 	// User Creation

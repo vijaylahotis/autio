@@ -6,6 +6,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,13 @@ public class RegressionPageObjects extends TestAction{
 	           } 
 	
 	// New Team
+	
+	
+	@FindBy(xpath="//div[@id=\"select-id\"]")
+	public WebElement selectparentteam;
+	
+	@FindBy(xpath="(//div[text()='Deposits'])[2]")
+	public WebElement selectdeposits;
 	
 	@FindBy(xpath="//*[text()='New Team']")
 	public WebElement NewTeam;
@@ -63,53 +71,62 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//input[@id='sunset_date']")
 	public WebElement clicksunsetdate;
 	
-	@FindBy(xpath="//td[@title=\"2023-08-11\"]")
+	@FindBy(xpath="//td[@title=\"2023-08-22\"]")
 	public WebElement select_sunsetdate;
 	
 	@FindBy(xpath="//*[text()='Create Team']")
     public WebElement click_createteam;
 	
-	@FindBy(xpath="//*[@class='ant-btn css-byeoj0 ant-btn-default ant-btn-lg' and span[text()='Cancel']]")
+	@FindBy(xpath="//*[@class='ant-btn css-17a39f8 ant-btn-default ant-btn-lg' and span[text()='Cancel']]")
     public WebElement click_cancelteam;
 	
 	// Position 1 & Member 1
 	
-	@FindBy(xpath="//*[text()='Team-AR']")
-    public WebElement click_teamname;
-	
-	
-	@FindBy(xpath="(//div[contains(@class, 'ag-cell-value')][@col-id='role_name'])[1]")
-    public WebElement click_role_row1;
 
+    String Teamname = "//*[text()='#']";
+	 
+	@FindBy(xpath="(//div[@col-id='role_name'])[2]")
+	 public WebElement click_role_row1;
 	
-	@FindBy(xpath="//*[text()='UX']")
-    public WebElement click_selectposition1;
+//	@FindBy(xpath="//*[text()='Java Developer']")
+ //   public WebElement click_selectposition1;
 		
-	@FindBy(xpath="//div[contains(@class, 'ag-cell-value')][@col-id='team_member_name']")
+	String Position1="//*[text()='#']";
+	
+	@FindBy(xpath="(//div[@col-id='team_member_name'])[2]")
     public WebElement click_member_row1;
 	
 	
-	String Member1="//div[text()='#']";
+    String Member1="//div[text()='#']";
+    
+    @FindBy(xpath="(//div[@col-id='hire_date'])[2]")
+    public WebElement click_startdate1;
 	
 	@FindBy(xpath="//*[text()='Save changes']")
     public WebElement click_savechanges1;
 	
 	// Position 2 & Member 2
 
-	@FindBy(xpath="(//div[contains(@class, 'ag-cell-value')][@col-id='role_name'])[2]")
+	@FindBy(xpath="(//div[@col-id='role_name'])[3]")
     public WebElement click_role_row2;
 	
 	
-	@FindBy(xpath="//*[text()='Designer']")
-    public WebElement click_selectposition2;
+//	@FindBy(xpath="//*[text()='Designer']")
+  //  public WebElement click_selectposition2;
 	
-	@FindBy(xpath="(//*[@class='ag-center-cols-container']//div[contains(@class, 'ag-cell-value')][@col-id='team_member_name'])[2]")
+	String Position2="//*[text()='#']";
+
+	
+	@FindBy(xpath="(//div[@col-id='team_member_name'])[3]")
     public WebElement click_member_row2;
 	
 	
 	String Member2="//*[text()='#']";
 	
-	@FindBy(xpath="//button[span[text()='Save changes']]")
+	@FindBy(xpath="(//div[@col-id='hire_date'])[3]")
+    public WebElement click_startdate2;
+	
+	@FindBy(xpath="//*[text()='Save changes']")
     public WebElement click_savechanges2;
 	
 	// Actions Cancel
@@ -119,7 +136,9 @@ public class RegressionPageObjects extends TestAction{
 	
 	String Actions1="//*[text()='#']";
 	
-	@FindBy(xpath="(//button[@class='ant-btn css-byeoj0 ant-btn-default ant-btn-block ant-btn-dangerous'])[32]")
+	String MemberAction="//*[text()='#']";
+	
+	@FindBy(xpath="(//span[text()='Cancel'])[12]")
     public WebElement click_cancelbutton1;
 	
 	@FindBy(xpath="//*[text()='Yes']")
@@ -131,10 +150,19 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
     public WebElement click_actionrequired2;
 	
+	@FindBy(xpath="//span[contains(text(), 'All')]")
+    public WebElement click_filter;
+	
+	@FindBy(xpath="//div[contains(text(), 'New Confirmed Contractors')]")
+    public WebElement click_confirmedcontractor;
+	
 	String Actions2="//*[text()='#']";
 	
-	@FindBy(xpath="(//button[@class='ant-btn css-byeoj0 ant-btn-default ant-btn-block ant-btn-dangerous'])[2]")
+	String cancelbutton = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'button')])";
+	
+	@FindBy(xpath="//a[text()='A-09 B-09']/ancestor::li//button/span[text()='Cancel']")
     public WebElement click_cancelbutton2;
+	
 	
 	@FindBy(xpath="//*[text()='Yes']")
     public WebElement click_yes2;
@@ -142,23 +170,50 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//span[@class=\"anticon anticon-close\"]")
     public WebElement click_X2;
 	
+	@FindBy(xpath="(//span[@data-testid=\"avatar\"])[1]")
+    public WebElement click_avatar;
+	
+	@FindBy(xpath="//span[text()='Log Out']")
+    public WebElement click_logout;
+	
+	@FindBy(xpath="//div[@class=\"table\"]")
+    public WebElement click_out;
+	
 	// New team member Assign
 	
 	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
     public WebElement click_actionrequired3;
 	
-	String Actions3="//*[text()='#']";
+	String Actions3="//*[contains(text(), '#')]";
+	
+	String dropdownteammember = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-17a39f8 ant-select-single ant-select-allow-clear ant-select-show-arrow')])[1]";
+	
+	String teamname = "//*[contains(text(), '#')]";
+	
+	String teamtype = "//div[contains(text(), '#')]";
+	
+	String positionname ="(//div[text()='#'])[2]";
+	
+	String addnewmember = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@class, 'ant-btn css-17a39f8 ant-btn-primary')])[1]";
+	
+	String dropdownteammember1 = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-17a39f8 ant-select-single ant-select-allow-clear ant-select-show-arrow')])[2]";
+	
+	String teamtype1 = "//div[contains(text(), '#')]";
+	
+	String positionname1 ="(//div[text()='#'])[2]";
+	
+	String mergemember = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@class, 'ant-btn css-17a39f8 ant-btn-primary')])[2]";
 	
 	// @FindBy(xpath="//*[contains(text(), 'Aiden Markram onboarded in Azure AD on @source.HireDate. Please assign Aiden Markram to one of your teams')]")
    // public WebElement click_a1;
 	
-	@FindBy(xpath="(//div[@class='ant-select ant-cascader ant-select-in-form-item css-byeoj0 ant-select-single ant-select-allow-clear ant-select-show-arrow'])[1]")
+	@FindBy(xpath="//*[contains(text(), 'Select team position')]")
     public WebElement click_addnewmember;
 	
-	@FindBy(xpath="//*[@title='SQA Team1']")
+	@FindBy(xpath="//*[@title='SQA Team']")
     public WebElement click_selectteam;
 	
-	@FindBy(xpath="(//*[text()='Java Developer'])[2]")
+	@FindBy(xpath="//*[text()='Scrum Master']")
     public WebElement click_selectposition;
 	
 	@FindBy(xpath="(//button[span[text()='Add New Member']])[1]")
@@ -182,6 +237,7 @@ public class RegressionPageObjects extends TestAction{
     public WebElement click_provider;
 	
 	String Provider="//span[@title='#']";
+
 	
 	@FindBy(xpath="//span[text()='Create Member']")
     public WebElement click_createmember;
@@ -194,10 +250,10 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
     public WebElement click_actionrequired4;
 	
-	@FindBy(xpath="//*[text()='Alexander Dsouza onboarded in Azure AD on @source.HireDate. Please assign Alexander Dsouza to one of your teams']")
+	@FindBy(xpath="//*[contains(text(), 'Name XOCRI')]")
     public WebElement click_newhire;
 	
-	@FindBy(xpath="(//div[@class='ant-select ant-cascader ant-select-in-form-item css-byeoj0 ant-select-single ant-select-allow-clear ant-select-show-arrow'])[2]")
+	@FindBy(xpath="(//div[contains(@class, 'ant-select') and contains(@class, 'ant-cascader') and contains(@class, 'ant-select-single')])[2]")
     public WebElement click_mergeteammember;
 	
 	@FindBy(xpath="//*[@title='SQA Team']")
@@ -206,7 +262,7 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="(//*[text()='Bilal Ahmed'])[3]")
     public WebElement click_mergeselectposition;
 	
-	@FindBy(xpath="(//button[@class='ant-btn css-byeoj0 ant-btn-primary' and span[text()='Merge']])[1]")
+	@FindBy(xpath="(//button[span[text()='Merge']])[1]")
     public WebElement click_mergebutton;
 	
 	@FindBy(xpath="//input[@id='experience']")
@@ -223,16 +279,16 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
 	 public WebElement click_actionrequired5;
 		
-	@FindBy(xpath="(//*[text()='Confirm Move Team Member'])[2]")
+	@FindBy(xpath="//*[text()='Confirm Move Team Member']")
 	 public WebElement click_moveteammember;
 		
-    @FindBy(xpath="(//input[@id='formCreateRecord_date'])[3]")
+    @FindBy(xpath="(//input[@id='formCreateRecord_date'])[14]")
 	 public WebElement click_selectdate;
 		
-	@FindBy(xpath="//*[@title='2023-08-14']")
+	@FindBy(xpath="//*[@title='2023-08-22']")
 	 public WebElement select_date;
 	
-	@FindBy(xpath="(//button[@class='ant-btn css-byeoj0 ant-btn-primary' and @hidden and span[text()='Confirm']])[2]")
+	@FindBy(xpath="(//button[@class='ant-btn css-17a39f8 ant-btn-primary' and span[text()='Confirm']])[14]")
     public WebElement click_confirm;
 	
 	
@@ -256,10 +312,16 @@ public class RegressionPageObjects extends TestAction{
 	// New Team
 	
 	public void clickteam() throws InterruptedException {
-    	this.click(NewTeam);
+		this.click(selectparentteam);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selectdeposits);
+		this.click(selectdeposits);
     	
 	}
 	
+	public void clicknewteam() throws InterruptedException {
+    	this.click(NewTeam);
+    	
+	}
 	
 	public void selectgroup(String txtGroup) {
 		try {
@@ -271,9 +333,10 @@ public class RegressionPageObjects extends TestAction{
 		}
 	}
 	
-	public void enterteamname() throws InterruptedException {
+	public String enterteamname() throws InterruptedException {
 		String randomTeamName = generateRandomTeamname(5); // Specify the desired length
 		enter_teamname.sendKeys(randomTeamName);
+		return randomTeamName;
 	}
 	
 	public void selectteamleader(String txtTeamLeader) {
@@ -300,17 +363,23 @@ public class RegressionPageObjects extends TestAction{
 	}
 	
 	public void selectdetails() throws InterruptedException {
-    	this.click(clicksunsetdate);
-    	this.click(select_sunsetdate);
-    	//this.click(click_createteam);
-    	this.click(click_cancelteam);
+    	//this.click(clicksunsetdate);
+    	//this.click(select_sunsetdate);
+    	this.click(click_createteam);
+    	//this.click(click_cancelteam);
     	
 	}
 	
 	// Position & Member 
 	
-	public void clickonteamname() throws InterruptedException {
-    	this.click(click_teamname);
+	public void clickonteamname(String txtTeamname) throws InterruptedException {
+    	try {
+			this.clickOnDynamicElement(Teamname, txtTeamname);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+    	
 	}
 	
 	public void createposition1(String PositionName) throws InterruptedException {
@@ -332,16 +401,18 @@ public class RegressionPageObjects extends TestAction{
 	
 	}
 	
-	public void selectposition1() {
+	public String selectposition1(String txtPosition1) {
 		try {
+			this.click(click_role_row1);
 			Actions actions = new Actions(driver);
 			actions.doubleClick(click_role_row1).perform();
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", click_selectposition1);
-			this.click(click_selectposition1);
+			this.clickOnDynamicElement(Position1, txtPosition1);
+		//	this.click(click_selectposition1);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return txtPosition1;
 	}
 	
 	public void createmember1(String MemberName) throws InterruptedException {
@@ -354,36 +425,39 @@ public class RegressionPageObjects extends TestAction{
 		//this.sendkeys(click_member_row1, MemberName);
 	}
 	
-	public void selectmember1(String txtMember1) {
+	public String selectmember1(String txtMember1) {
 		try {
 			Actions actions = new Actions(driver);
 			actions.doubleClick(click_member_row1).perform();
-			this.clickOnDynamicElement(Member1, txtMember1);
+		    this.clickOnDynamicElement(Member1, txtMember1);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return txtMember1;
 	}
 	
 	public void savechanges1()throws InterruptedException {
+		this.click(click_startdate1);
     	this.click(click_savechanges1);
 	}
 	
 	
 	
-	public void selectposition2() {
+	public String selectposition2(String txtPosition2) {
 		try {
+			this.click(click_role_row2);
 			Actions actions = new Actions(driver);
 			actions.doubleClick(click_role_row2).perform();
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", click_selectposition2);
-			this.click(click_selectposition2);
+			this.clickOnDynamicElement(Position2, txtPosition2);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return txtPosition2;
 	}
 		
-	public void selectmember2(String txtMember2) {
+	public String selectmember2(String txtMember2) {
 		try {
 			Actions actions = new Actions(driver);
 			actions.doubleClick(click_member_row2).perform();
@@ -391,16 +465,18 @@ public class RegressionPageObjects extends TestAction{
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}
+		return txtMember2;	
 	}
 	
 	public void savechanges2() throws InterruptedException {
+        this.click(click_startdate2);
     	this.click(click_savechanges2);
 	}
 	
 	// Actions Cancel
 	
-	public void actioncancel1(String txtActions1) {
+	public void actioncancel1(String txtActions1) throws InterruptedException {
     	this.click(click_actionrequired1);
 		try {
 			this.clickOnDynamicElement(Actions1, txtActions1);
@@ -409,11 +485,47 @@ public class RegressionPageObjects extends TestAction{
 			e.printStackTrace();
 		}
 		this.click(click_cancelbutton1);
+		Thread.sleep(2000);
 		this.click(click_yes1);
+		Thread.sleep(2000);
 		this.click(click_X1);
 	
 	}
-	public void actioncancel2(String txtActions2) {
+	
+		
+	public void action(String txtMemberAction) throws InterruptedException {
+    	try {
+    		this.click(click_actionrequired2);
+		//	this.clickOnDynamicElement(MemberAction, txtMemberAction);
+			this.clickOnDynamicElement(cancelbutton, txtMemberAction);
+		//	this.click(click_cancelbutton2);
+			Thread.sleep(2000);
+			this.click(click_yes2);
+			Thread.sleep(2000);
+			this.click(click_X2);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+    	
+	}
+	
+	public void logout() throws InterruptedException {
+    	this.click(click_avatar);
+    	this.click(click_logout);
+    	this.click(click_out);
+	}
+	
+	
+	public void clickCancel(String webElement, String elementToReplace) {
+		this.click(click_actionrequired2);
+        String eleToClick = webElement.replaceAll("#", elementToReplace);
+        WebElement cancelElement = driver.findElement(By.xpath(eleToClick));
+        cancelElement.click();
+    }
+	
+	
+	public void actioncancel2(String txtActions2) throws InterruptedException {
     	this.click(click_actionrequired2);
 		try {
 			this.clickOnDynamicElement(Actions2, txtActions2);
@@ -422,19 +534,60 @@ public class RegressionPageObjects extends TestAction{
 			e.printStackTrace();
 		}
 		this.click(click_cancelbutton2);
+		Thread.sleep(2000);
 		this.click(click_yes2);
+		Thread.sleep(2000);
 		this.click(click_X2);
 	
 	}
 	
 	// Assign a new hire to an existing open position
 	
-	public void clickonactions(String txtActions3) {
+	public void clickonactions(String txtfirstname) {
 		try {
 			this.click(click_actionrequired2);
-			//this.click(click_a1);
-		    this.clickOnDynamicElement(Actions3, txtActions3);
+		//	this.click(click_filter);
+		//	this.click(click_confirmedcontractor);
+		//	this.clickOnDynamicElement(Actions3, txtfirstname);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+			wait.until(ExpectedConditions.elementToBeClickable(this.findDynamicElement(dropdownteammember, txtfirstname)));
+		    this.clickOnDynamicElement(dropdownteammember, txtfirstname);
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickonteamactions(String txtteamtype) {
+		try {
+			
+		    this.clickOnDynamicElement(teamtype, txtteamtype);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickonpositionactions(String txtpositionname) {
+		try {
+			
+		    this.clickOnDynamicElement(positionname, txtpositionname);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickonaddnewmember(String txtaddnewmember) {
+		try {
+			
+		    try {
+				this.clickOnDynamicElement(addnewmember, txtaddnewmember);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (StaleElementReferenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -501,10 +654,62 @@ public class RegressionPageObjects extends TestAction{
 	
 	public void clickcreatemember() throws InterruptedException {
     	this.click(click_createmember);
+    	Thread.sleep(5000);
+    	this.click(click_X2);
 	}
 	
 	
 	// Merge
+	
+	public void clickonmergeactions(String txtfirstname) {
+		try {
+			this.click(click_actionrequired2);
+		//	this.click(click_filter);
+		//	this.click(click_confirmedcontractor);
+		//	this.clickOnDynamicElement(Actions3, txtfirstname);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+			wait.until(ExpectedConditions.elementToBeClickable(this.findDynamicElement(dropdownteammember1, txtfirstname)));
+		    this.clickOnDynamicElement(dropdownteammember1, txtfirstname);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickonmergeteamactions(String txtteamtype) {
+		try {
+			
+		    this.clickOnDynamicElement(teamtype1, txtteamtype);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickonmergepositionactions(String txtpositionname) {
+		try {
+			
+		    this.clickOnDynamicElement(positionname1, txtpositionname);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickonmergemember(String txtaddnewmember) {
+		try {
+			
+		    try {
+				this.clickOnDynamicElement(mergemember, txtaddnewmember);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (StaleElementReferenceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	public void clickonactions() {
 		try {
@@ -552,6 +757,8 @@ public class RegressionPageObjects extends TestAction{
 	
 	public void clickupdatemember() throws InterruptedException {
     	this.click(click_updatemember);
+    	Thread.sleep(5000);
+    	this.click(click_X2);
 	}
 	
 		

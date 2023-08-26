@@ -8,6 +8,7 @@ import org.testng.log4testng.Logger;
 
 import basepackage.TestAction;
 import Utilities.Constants;
+import Utilities.Inputs;
 
 public class SignInPageObjects extends TestAction{
 
@@ -85,6 +86,36 @@ public class SignInPageObjects extends TestAction{
 	clickOnSignIn(); 	 
 	clickOnYes();
 	//Thread.sleep(5000);
-		    }
-	    
+	}
+	
+	public void hiringsign() throws InterruptedException {
+		navigateUrl(Inputs.URL) ; 
+		enterAdminEmail(Inputs.HiringEmail); 
+		clickOnSign();
+		enterAdminPassword(Inputs.HiringPassword); 
+		clickOnSignIn(); 	 
+		clickOnYes();
+		//Thread.sleep(5000);
+			    }
+	
+	public void adminsign1() throws InterruptedException {
+		navigateUrl(Constants.URL) ; 
+		enterAdminEmail(Constants.adminEmail); 
+		clickOnSign();   
+}
+	
+	public void hiringsign1() throws InterruptedException {
+		navigateUrl(Inputs.URL) ; 
+		enterAdminEmail(Inputs.HiringEmail); 
+		clickOnSign();
+		enterAdminPassword(Inputs.HiringPassword); 
+		clickOnSignIn(); 	
+	}		
+	
+	public void hiringsign2() throws InterruptedException {
+		navigateUrl(Inputs.URL) ; 
+		enterAdminEmail(Inputs.HiringEmail); 
+		clickOnSign();
+			
+	}		
 }

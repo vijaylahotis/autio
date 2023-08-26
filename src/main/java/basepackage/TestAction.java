@@ -155,6 +155,51 @@ public class TestAction {
 		return sb.toString();
 	}
 	
+	public static String generateRandomprimaryname(int length) {
+		StringBuilder sb = new StringBuilder(length);
+		sb.append("Name-");
+		for (int i = 0; i < length; i++) {
+			int randomIndex = RANDOM.nextInt(CAPITAL_CHARACTERS.length());
+			char randomChar = CAPITAL_CHARACTERS.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
+	
+	public static String generateRandomdisplayname(int length) {
+		StringBuilder sb = new StringBuilder(length);
+		sb.append("Name ");
+		for (int i = 0; i < length; i++) {
+			int randomIndex = RANDOM.nextInt(CAPITAL_CHARACTERS.length());
+			char randomChar = CAPITAL_CHARACTERS.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
+	
+	public static String generateRandomfirstname(int length) {
+		StringBuilder sb = new StringBuilder(length);
+		sb.append("Name ");
+		for (int i = 0; i < length; i++) {
+			int randomIndex = RANDOM.nextInt(CAPITAL_CHARACTERS.length());
+			char randomChar = CAPITAL_CHARACTERS.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
+	
+	public static String generateRandomlastname(int length) {
+		StringBuilder sb = new StringBuilder(length);
+		sb.append("Name ");
+		for (int i = 0; i < length; i++) {
+			int randomIndex = RANDOM.nextInt(CAPITAL_CHARACTERS.length());
+			char randomChar = CAPITAL_CHARACTERS.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
+	
+	
 	public void selectDropdownOptions(List<WebElement> listOfElement,String dropdownElement ) {
 		for (WebElement liElement : listOfElement) {
 			if (liElement.getText().trim().equals(dropdownElement)) {
