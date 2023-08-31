@@ -16,10 +16,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-
+import org.openqa.selenium.Keys;
 
 import basepackage.TestAction;
 import org.openqa.selenium.interactions.Actions;
+import java.time.LocalDate;
 
 
 
@@ -38,6 +39,8 @@ public class RegressionPageObjects extends TestAction{
 	
 	@FindBy(xpath="//div[@id=\"select-id\"]")
 	public WebElement selectparentteam;
+	
+	String parentteam = "(//div[text()='#'])[3]";
 	
 	@FindBy(xpath="(//div[text()='Deposits'])[2]")
 	public WebElement selectdeposits;
@@ -99,10 +102,10 @@ public class RegressionPageObjects extends TestAction{
 	
     String Member1="//div[text()='#']";
     
-    @FindBy(xpath="(//div[@col-id='hire_date'])[2]")
+    @FindBy(xpath="(//div[@col-id='budgeted_hourly_rate'])[2]")
     public WebElement click_startdate1;
 	
-	@FindBy(xpath="//*[text()='Save changes']")
+	@FindBy(xpath="//span[contains(text(), 'Save changes')]")
     public WebElement click_savechanges1;
 	
 	// Position 2 & Member 2
@@ -123,10 +126,10 @@ public class RegressionPageObjects extends TestAction{
 	
 	String Member2="//*[text()='#']";
 	
-	@FindBy(xpath="(//div[@col-id='hire_date'])[3]")
+	@FindBy(xpath="(//div[@col-id='budgeted_hourly_rate'])[3]")
     public WebElement click_startdate2;
 	
-	@FindBy(xpath="//*[text()='Save changes']")
+	@FindBy(xpath="//span[contains(text(), 'Save changes')]")
     public WebElement click_savechanges2;
 	
 	// Actions Cancel
@@ -147,7 +150,7 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//span[@class=\"anticon anticon-close\"]")
     public WebElement click_X1;
 	
-	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
+	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired2;
 	
 	@FindBy(xpath="//span[contains(text(), 'All')]")
@@ -181,12 +184,12 @@ public class RegressionPageObjects extends TestAction{
 	
 	// New team member Assign
 	
-	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
+	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired3;
 	
 	String Actions3="//*[contains(text(), '#')]";
 	
-	String dropdownteammember = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-17a39f8 ant-select-single ant-select-allow-clear ant-select-show-arrow')])[1]";
+	String dropdownteammember = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-190m0jy ant-select-single ant-select-allow-clear ant-select-show-arrow')])[1]";
 	
 	String teamname = "//*[contains(text(), '#')]";
 	
@@ -194,15 +197,17 @@ public class RegressionPageObjects extends TestAction{
 	
 	String positionname ="(//div[text()='#'])[2]";
 	
-	String addnewmember = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@class, 'ant-btn css-17a39f8 ant-btn-primary')])[1]";
+	String addnewmember = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'submit')])[1]";
 	
-	String dropdownteammember1 = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-17a39f8 ant-select-single ant-select-allow-clear ant-select-show-arrow')])[2]";
+	String dropdownteammember1 = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-190m0jy ant-select-single ant-select-allow-clear ant-select-show-arrow')])[2]";
 	
 	String teamtype1 = "//div[contains(text(), '#')]";
 	
 	String positionname1 ="(//div[text()='#'])[2]";
 	
-	String mergemember = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@class, 'ant-btn css-17a39f8 ant-btn-primary')])[2]";
+	String mergemember = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'submit')])[2]";
+	
+	String dropdownteammember2 = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@class, 'ant-btn css-190m0jy ant-btn-default ant-btn-block ant-btn-dangerous')])[2]";
 	
 	// @FindBy(xpath="//*[contains(text(), 'Aiden Markram onboarded in Azure AD on @source.HireDate. Please assign Aiden Markram to one of your teams')]")
    // public WebElement click_a1;
@@ -236,7 +241,7 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//input[@id='service_provider_id']")
     public WebElement click_provider;
 	
-	String Provider="//span[@title='#']";
+	String Provider="//div[@title='#']";
 
 	
 	@FindBy(xpath="//span[text()='Create Member']")
@@ -247,7 +252,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	//Merge a new hire
 	
-	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
+	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired4;
 	
 	@FindBy(xpath="//*[contains(text(), 'Name XOCRI')]")
@@ -276,7 +281,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	//Move team member past date
 	
-	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
+	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
 	 public WebElement click_actionrequired5;
 		
 	@FindBy(xpath="//*[text()='Confirm Move Team Member']")
@@ -294,7 +299,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	//Move team member future date
 	
-	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
+	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
 	public WebElement click_actionrequired6;
 			
 	@FindBy(xpath="(//*[text()='Confirm Move Team Member'])[2]")
@@ -309,13 +314,128 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="(//button[@class='ant-btn css-byeoj0 ant-btn-primary' and @hidden and span[text()='Confirm']])[3]")
 	public WebElement click_confirm1;
 	
+	// UI messages
+	
+	@FindBy(xpath="//div[text()=' Team Created Successfully!']")
+	public WebElement TeamCreatedSuccessfully_Message;
+	
+	@FindBy(xpath="//span[text()=' created/updated successfully']")
+	public WebElement RecordCreatedSuccessfully_Message;
+	
+	@FindBy(xpath="//div[text()='Updated Successfully!']")
+	public WebElement CancelUpdatedSuccessfully_Message;
+	
+	@FindBy(xpath="//div[text()='Added Successfully!']")
+	public WebElement AddedSuccessfully_Message;
+	
+	@FindBy(xpath="//div[text()='Merged Successfully!']")
+	public WebElement MergedSuccessfully_Message;
+	
+	// Roll _off
+	
+	@FindBy(xpath="(//div[@col-id='roll_off_date'])[2]")
+	public WebElement click_rolloff_row1;
+	
+	@FindBy(xpath="//div[contains(text(), '31')]")
+	public WebElement select_rolloff_row1;
+	
+	String rolloffdate = "//div[contains(text(), '#')]";
+	
+	@FindBy(xpath="//span[contains(text(), 'Save changes')]")
+    public WebElement click_savechanges3;
+	
+	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+    public WebElement click_actionrequired0;
+	
+	String cancelbutton1 = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'button')])";
+	
+	@FindBy(xpath="//span[text()='Yes']")
+    public WebElement click_yes3;
+	
+	@FindBy(xpath="//span[@class='anticon anticon-close']")
+    public WebElement click_X4;
+	
+	// Update service provider
+	
+	@FindBy(xpath="(//button[@class='ant-btn css-190m0jy ant-btn-circle ant-btn-default ant-btn-icon-only ant-dropdown-trigger action-circle-btn'])[1]")
+    public WebElement click_editicon;
+	
+	@FindBy(xpath="//span[text()='Edit Team Member']")
+    public WebElement click_editteammember;
+	
+	@FindBy(xpath="//input[@id=\"employee_hire_date\"]")
+    public WebElement click_startdate;
+	
+	@FindBy(xpath="//button[@class=\"ant-picker-header-next-btn\"]")
+    public WebElement click_nextdate;
+	
+	String eststratdate = "//div[text()='#']";
+	
+	@FindBy(xpath="//span[text()='Update Member']")
+    public WebElement click_update;
+	
+	
+	// Budg/rate
+	
+	@FindBy(xpath="(//div[@col-id='budgeted_hourly_rate'])[2]")
+    public WebElement click_bdgrate;
+	
+	@FindBy(xpath="//span[contains(text(), 'Save changes')]")
+    public WebElement click_savechanges4;
+	
+	
+	// Cancel roll off
+	
+	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+    public WebElement click_actionrequired7;
+	
+	String cancelrolloff = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'button')])";
+	
+	@FindBy(xpath="//span[text()='Yes']")
+    public WebElement click_yes4;
+	
+	@FindBy(xpath="//span[@class='anticon anticon-close']")
+    public WebElement click_X5;
+	
+	// Confirm roll off
+	
+	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+    public WebElement click_actionrequired8;
+	
+	String confirmrolloff = "(//*[contains(text(), '#')]/ancestor::li//input[contains(@id, 'formCreateRecord_date')])";
+	
+	String confirmdate = "(//div[text()='#'])[2]";
+	
+	String reasondropdown = "//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-select-in-form-item w-100 css-190m0jy ant-select-single ant-select-show-arrow')]";
+	
+	String reason = "//div[text()='#']";
+	
+	String confirm = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'submit')])";
+	
+	@FindBy(xpath="//span[@class='anticon anticon-close']")
+    public WebElement click_X6;
+	
+	
+
+	
+	String dateValue = "2023-08-29";
+	
 	// New Team
 	
 	public void clickteam() throws InterruptedException {
 		this.click(selectparentteam);
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selectdeposits);
-		this.click(selectdeposits);
+	//	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selectdeposits);
+	//	this.click(selectdeposits);
     	
+	}
+	
+	public void selectparentteam(String txtparentteam) {
+		try {
+		    this.clickOnDynamicElement(parentteam, txtparentteam);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void clicknewteam() throws InterruptedException {
@@ -438,8 +558,11 @@ public class RegressionPageObjects extends TestAction{
 	}
 	
 	public void savechanges1()throws InterruptedException {
-		this.click(click_startdate1);
+	//	this.click(click_startdate1);
     	this.click(click_savechanges1);
+    	this.click(click_savechanges1);
+    //	Actions actions = new Actions(driver);
+	//	actions.doubleClick(click_savechanges1).perform();
 	}
 	
 	
@@ -470,8 +593,11 @@ public class RegressionPageObjects extends TestAction{
 	}
 	
 	public void savechanges2() throws InterruptedException {
-        this.click(click_startdate2);
+    //   this.click(click_startdate2);
     	this.click(click_savechanges2);
+    	this.click(click_savechanges2);
+	//	Actions actions = new Actions(driver);
+	//	actions.doubleClick(click_savechanges2).perform();
 	}
 	
 	// Actions Cancel
@@ -761,6 +887,26 @@ public class RegressionPageObjects extends TestAction{
     	this.click(click_X2);
 	}
 	
+	// ignore
+	
+	public void clickonignoreactions(String txtfirstname) {
+		try {
+			this.click(click_actionrequired2);
+		//	this.click(click_filter);
+		//	this.click(click_confirmedcontractor);
+		//	this.clickOnDynamicElement(Actions3, txtfirstname);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+			wait.until(ExpectedConditions.elementToBeClickable(this.findDynamicElement(dropdownteammember2, txtfirstname)));
+		    this.clickOnDynamicElement(dropdownteammember2, txtfirstname);
+		    this.click(click_yes2);
+			Thread.sleep(2000);
+			this.click(click_X2);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 		
 	// Move a member past or current date
 		
@@ -795,8 +941,218 @@ public class RegressionPageObjects extends TestAction{
 				e.printStackTrace();
 			}
 		}
+		
+		// UI Messages 
+		
+		public String isTeamCreatedSuccessfullyMessageDisplayed() {
+			String TeamCreatedSuccessfullyMessage=TeamCreatedSuccessfully_Message.getText();
+			return TeamCreatedSuccessfullyMessage;
+		}
+		
+		public String isRecordCreatedSuccessfullyMessageDisplayed1() {
+			String RecordCreatedSuccessfullyMessage=RecordCreatedSuccessfully_Message.getText();
+			return RecordCreatedSuccessfullyMessage;
+		}
+		
+		public String isRecordCreatedSuccessfullyMessageDisplayed2() {
+			String RecordCreatedSuccessfullyMessage=RecordCreatedSuccessfully_Message.getText();
+			return RecordCreatedSuccessfullyMessage;
+		}
+		
+		public String isCancelUpdatedSuccessfullyMessageDisplayed() {
+			String CancelUpdatedSuccessfullyMessage=CancelUpdatedSuccessfully_Message.getText();
+			return CancelUpdatedSuccessfullyMessage;
+		}
+		
+		public String isAddedSuccessfullyMessageDisplayed() {
+			String AddedSuccessfullyMessage=AddedSuccessfully_Message.getText();
+			return AddedSuccessfullyMessage;
+		}
+		
+		public String isMergedSuccessfullyMessageDisplayed() {
+			String MergedSuccessfullyMessage=MergedSuccessfully_Message.getText();
+			return MergedSuccessfullyMessage;
+		}
+		
+		// Roll-off Date
+		
+		
+		public void clickrolloff1(String datevalue) throws InterruptedException {
+			Actions actions = new Actions(driver);
+			actions.doubleClick(click_rolloff_row1).perform();
+		//	this.click(select_rolloff_row1);
+			Thread.sleep(8000);
+			this.click(click_savechanges3);
+		//	this.click(click_actionrequired0);
+		}
+		
+		
+
+		public void clickrolloff2(String txtrolloffdate) {
+			try {
+				Actions actions = new Actions(driver);
+				actions.doubleClick(click_rolloff_row1).perform();
+				this.clickOnDynamicElement(rolloffdate, txtrolloffdate);
+				this.click(click_savechanges3);
+				this.click(click_actionrequired0);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		public void cancelrolloff(String txtcancelbutton1) {
+			try {
+				this.clickOnDynamicElement(cancelbutton1, txtcancelbutton1);
+				this.click(click_yes3);
+				this.click(click_X4);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}	
+		
+		public void clickrolloff1() throws InterruptedException {
+			Actions actions = new Actions(driver);
+			actions.doubleClick(click_rolloff_row1).perform();
+			this.newdate();
+            LocalDate dateToBeSelected = newdate();
+		//	this.sendkeys(click_rolloff_row1, dateToBeSelected);
 }
-	
+		
+		// Update details
+		
+		public void updatedetails() {
+			try {
+				this.click(click_editicon);
+				this.click(click_editteammember);
+					
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public void entermonthlyrate1() throws InterruptedException {
+			String randomMonthlyRate = generateRandommonthlyrate(2); 
+			click_monthlyrate.sendKeys(randomMonthlyRate);
+			}
+		
+		public void enterexperience1() throws InterruptedException {
+			String randomExperience = generateRandomexperience(0); 
+			click_experience.sendKeys(randomExperience);
+		    }
+		
+		public void entertenure1() throws InterruptedException {
+			String randomTenure = generateRandomtenure(0); 
+			click_tenure.sendKeys(randomTenure);
+		    }
+		
+		public void selectProvider1(String txtProvider) {
+			try {
+				this.click(click_provider);
+				this.sendkeys(click_provider, txtProvider);
+				this.clickOnDynamicElement(Provider, txtProvider);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public void selectstartdate(String txtdate) {
+			try {
+				this.click(click_startdate);
+				this.click(click_nextdate);
+				this.clickOnDynamicElement(eststratdate, txtdate);
+				this.click(click_update);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		// Update Budget rate
+		
+		public void enterbudgetrate1() throws InterruptedException {
+			String randomBudgetRate = generateRandombudgetrate(2); 
+			click_bdgrate.sendKeys(randomBudgetRate);
+			}
+		
+		
+	   
+		// COnfirm roll off
+		
+		public void clickonconfirmrolloffactions(String txtconfirmrolloff) {
+			try {
+				this.click(click_actionrequired8);
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+				wait.until(ExpectedConditions.elementToBeClickable(this.findDynamicElement(confirmrolloff, txtconfirmrolloff)));
+			    this.clickOnDynamicElement(confirmrolloff, txtconfirmrolloff);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public void clickonconfirmdate(String txtconfirmdate) {
+			try {
+				
+			    this.clickOnDynamicElement(confirmdate, txtconfirmdate);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public void clickonconfirmreason(String txtreasondropdown) {
+			try {
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+				wait.until(ExpectedConditions.elementToBeClickable(this.findDynamicElement(reasondropdown, txtreasondropdown)));
+			    this.clickOnDynamicElement(reasondropdown, txtreasondropdown);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public void clickonreason(String txtreason) {
+			try {
+				
+			    this.clickOnDynamicElement(reason, txtreason);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public void clickonconfirm(String txtconfirm) {
+			try {
+				
+			    this.clickOnDynamicElement(confirm, txtconfirm);
+			    this.click(click_X6);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+		// cancel roll off
+		
+		public void cancelrolloff1(String txtfirstname) {
+			try {
+				this.click(click_actionrequired7);
+				this.clickOnDynamicElement(cancelrolloff, txtfirstname);
+				this.click(click_yes4);
+				this.click(click_X5);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					}
+				}
+}
+
 	
 	
 	

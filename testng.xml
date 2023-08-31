@@ -7,14 +7,7 @@
 	
 	<class name="TestScripts.RegressionTests">
 	<methods>
-		 <include name="CreateTeam"/>
-		 <include name="SelectPositionMember"/>
-		 <include name="CreatePositionMember"/>
-		 <include name="Cancelpotentialmember"/>
-		 <include name="AssignNewHire"/>
-		 <include name="MergeNewHire"/>
-		 <include name="Moveteammember"/>
-		 <include name="Moveteammember1"/>
+		 <include name="RegressionSuite"/>
 	</methods> 
 	</class>
 	

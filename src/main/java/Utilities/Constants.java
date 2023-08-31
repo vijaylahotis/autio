@@ -114,13 +114,13 @@ public class Constants extends TestAction{
 	public static final String Teamlevel2 = "3 - Business Unit";
 	public static final String Parentteam1 = "Finance";
 	public static final String Parentteam2 = "Global Enterprise";
-	public static final String Teamname1 = "Insurer";
+	public static final String Teamname1 = "Team-A2";
 	public static final String Teamname2 = "Shipper";
 	public static final String Teamleader1 = "Ana de Armas";
 	public static final String Teamleader2 = "Dora Samuels";
 	public static final String Teamtype1 = "Grow";
 	public static final String Teamtype2 = "Run";
-	
+	public static final String Date = "30";
 	
 	
 	

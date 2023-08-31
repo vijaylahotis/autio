@@ -89,7 +89,7 @@ public class AzureSignIn extends TestAction{
     @FindBy(xpath="//div[@id='employeeHireDate-editComponent135-label']")
    	public WebElement clickhiredate;
     
-    @FindBy(xpath="(//span[text()='23'])[2]")
+    @FindBy(xpath="(//span[text()='28'])[2]")
    	public WebElement selecthiredate;
     
     @FindBy(xpath="//span[text()='Add manager']")
@@ -97,9 +97,12 @@ public class AzureSignIn extends TestAction{
        
     @FindBy(xpath="//input[@id='SearchBox4']")
     public WebElement entersearch;
-          
+    
     @FindBy(xpath="//div[text()='Mahesh']")
     public WebElement clickcheckbox;
+          
+    @FindBy(xpath="(//i[@data-icon-name='StatusCircleCheckmark'])[1]")
+    public WebElement clickcheckbox1;
           
     @FindBy(xpath="//span[text()='Select']")
     public WebElement clickselect;
@@ -116,6 +119,17 @@ public class AzureSignIn extends TestAction{
     @FindBy(xpath="//a[text()='Sign out']")
     public WebElement click_signout;
     
+    @FindBy(xpath="//input[@id='SearchBox4']")
+    public WebElement click_searchbox;
+    
+    @FindBy(xpath="(//i[@data-icon-name='StatusCircleCheckmark'])[2]")
+    public WebElement click_check;
+    
+    @FindBy(xpath="//span[text()='Delete']")
+    public WebElement click_delete;
+    
+    @FindBy(xpath="//span[text()='OK']")
+    public WebElement click_ok;
           
     public void enterAzureEmail(String azureemailid) throws InterruptedException {
     	this.click(click_anotheraccount);
@@ -212,23 +226,32 @@ public class AzureSignIn extends TestAction{
     		    driver.switchTo().defaultContent();
     		    driver.switchTo().frame("_react_frame_5");
         		this.sendkeys(entersearch, Search);
-        		this.click(clickcheckbox);
+        		this.click(clickcheckbox1);
         		this.click(clickselect);
         		driver.switchTo().defaultContent();
         		driver.switchTo().frame("_react_frame_3");
         		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickreview);
         		this.click(clickreview);
         		this.click(clickcreate);
+    	}
         	//	driver.switchTo().defaultContent();
         	//	driver.switchTo().frame("_react_frame_2");
         	//	this.click(click_logout);
         	//	this.click(click_signout);
         		
-    	}	
-    	
-    	
-
-    	}
+        		
+        		public void createuser1(String firstname) throws InterruptedException {
+                	this.click(clickView);
+                	Thread.sleep(4000);
+                	this.click(clickUsers);
+                	Thread.sleep(4000);
+                	driver.switchTo().frame("_react_frame_2");
+                	this.sendkeys(click_searchbox, firstname);
+                	this.click(click_check);
+                	this.click(click_delete);
+                	this.click(click_ok);
+                	}
+        		}
     	
     
     

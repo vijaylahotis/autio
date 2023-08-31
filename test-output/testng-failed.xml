@@ -6,7 +6,7 @@
       <class name="TestScripts.RegressionTests">
         <methods>
           <include name="initializeChrome"/>
-          <include name="CreateTeam"/>
+          <include name="RegressionSuite"/>
         </methods>
       </class> <!-- TestScripts.RegressionTests -->
     </classes>

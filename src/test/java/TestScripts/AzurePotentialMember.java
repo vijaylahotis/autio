@@ -20,7 +20,7 @@ import PageObjects.AzureSignIn;
 import PageObjects.RegressionPageObjects;
 import PageObjects.RunNightJobsPageObjects;
 import PageObjects.SignInPageObjects;
-import TestScripts.RegressionTests;
+import TestScripts.RegressionTests1;
 
 
 

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.time.Duration;
+import java.time.LocalDate;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -194,6 +195,17 @@ public class TestAction {
 		for (int i = 0; i < length; i++) {
 			int randomIndex = RANDOM.nextInt(CAPITAL_CHARACTERS.length());
 			char randomChar = CAPITAL_CHARACTERS.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
+	
+	public static String generateRandombudgetrate(int length) {
+		StringBuilder sb = new StringBuilder(length);
+		sb.append("1");
+		for (int i = 0; i < length; i++) {
+			int randomIndex = RANDOM.nextInt(INTEGERS.length());
+			char randomChar = INTEGERS.charAt(randomIndex);
 			sb.append(randomChar);
 		}
 		return sb.toString();
@@ -419,7 +431,13 @@ public class TestAction {
         }
         
         
-        
-    
+        public LocalDate newdate() {
+    	    LocalDate currentDate = LocalDate.now();
+    	    System.out.println("Current Date: " + currentDate);
+    	    LocalDate newDate1 = currentDate.plusDays(1);
+    	    System.out.println("New Date (+1 day): " + newDate1);
+    	    return newDate1;
+    			    }
+
 }
 	

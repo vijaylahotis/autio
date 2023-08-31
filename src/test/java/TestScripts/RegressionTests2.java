@@ -28,6 +28,17 @@ public class RegressionTests2 extends TestBase{
 	public SignInPageObjects SignIn;
 	public RegressionPageObjects Regression;
 	
+	
+	@Test(priority=1,description="This testcase verifies to complete flow",enabled=true)
+	public void RegressionSuite1() throws InterruptedException  {
+		SignIn= new SignInPageObjects(driver);
+		SignIn.hiringsign();
+		Thread.sleep(5000);
+		Regression= new RegressionPageObjects(driver);
+		Regression.clickonteamname(Inputs.teamname);
+		Regression.cancelrolloff1(firstname1);
+}
+	
 	// Team Creation
 	
 		@Test(priority=0,description="This testcase verifies to create a Team",enabled=true)
@@ -37,7 +48,7 @@ public class RegressionTests2 extends TestBase{
 			Regression= new RegressionPageObjects(driver);
 			Regression.clickteam();
 			Regression.selectgroup(Inputs.Group2);
-			String teamname = Regression.enterteamname();
+			Regression.enterteamname();
 			Regression.selectteamleader(Inputs.TeamLeader1);
 			Regression.selectteamtype(Inputs.TeamType1);
 			Regression.selectdetails();
@@ -150,4 +161,47 @@ public class RegressionTests2 extends TestBase{
 		    Regression.clickonteamname();
 		    Regression.clickonmoveteammember1();
 	    }
+	    
+// Move a member future date
+		
+	    @Test(priority=7,description="This testcase verifies to move a member",enabled=true)
+		public void Moveteammember21() throws Throwable  {
+		    SignIn= new SignInPageObjects(driver);
+		    SignIn.hiringsign();		
+		    Regression= new RegressionPageObjects(driver);
+		    Regression.clickonteamname(Constants.Teamname1);
+		    Regression.clickrolloff1();
+		    
+		    
+	    }
+	    
+	    
+	    @Test(priority=7,description="This testcase verifies to move a member",enabled=true)
+		public void Moveteammember22() throws Throwable  {
+		    SignIn= new SignInPageObjects(driver);
+		    SignIn.hiringsign();		
+		    Regression= new RegressionPageObjects(driver);
+		    Regression.selectparentteam(Inputs.ParentTeam2);
+			Regression.clickonteamname(Inputs.teamname);
+			Regression.updatedetails();
+			Regression.entermonthlyrate1();
+			Regression.enterexperience1();
+			Regression.entertenure1();
+			Regression.selectProvider1(Inputs.Provider);
+			Regression.selectstartdate(Inputs.StartDate);    
+	    }
+	    
+	    
+	    @Test(priority=7,description="This testcase verifies to move a member",enabled=true)
+		public void Moveteammember32() throws Throwable  {
+		    SignIn= new SignInPageObjects(driver);
+		    SignIn.hiringsign();		
+		    Regression= new RegressionPageObjects(driver);
+		   // Regression.selectparentteam(Inputs.ParentTeam2);
+			Regression.clickonteamname(Constants.Teamname1);
+			Thread.sleep(4000);
+			Regression.enterbudgetrate1();
+			Thread.sleep(4000);
+			Regression.savechanges2();
+}
 }

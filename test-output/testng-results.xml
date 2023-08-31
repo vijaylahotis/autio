@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-26T17:50:06 IST" name="Default suite" finished-at="2023-08-26T18:17:03 IST" duration-ms="1617202">
+  <suite started-at="2023-08-31T20:04:26 IST" name="Default suite" finished-at="2023-08-31T20:39:39 IST" duration-ms="2112559">
     <groups>
     </groups>
-    <test started-at="2023-08-26T17:50:06 IST" name="Default test" finished-at="2023-08-26T18:17:03 IST" duration-ms="1617202">
+    <test started-at="2023-08-31T20:04:26 IST" name="Default test" finished-at="2023-08-31T20:39:39 IST" duration-ms="2112559">
       <class name="TestScripts.RegressionTests">
-        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:TestScripts.RegressionTests@235834f2]" started-at="2023-08-26T17:50:06 IST" name="initializeChrome" finished-at="2023-08-26T17:50:09 IST" duration-ms="2439" status="PASS">
+        <test-method is-config="true" signature="initializeChrome()[pri:0, instance:TestScripts.RegressionTests@1aafa419]" started-at="2023-08-31T20:04:26 IST" name="initializeChrome" finished-at="2023-08-31T20:04:28 IST" duration-ms="1734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeChrome -->
-        <test-method signature="CreateTeam()[pri:0, instance:TestScripts.RegressionTests@235834f2]" started-at="2023-08-26T17:50:09 IST" name="CreateTeam" description="This testcase verifies to create a Team" finished-at="2023-08-26T18:17:03 IST" duration-ms="1614482" status="PASS">
+        <test-method signature="RegressionSuite()[pri:0, instance:TestScripts.RegressionTests@1aafa419]" started-at="2023-08-31T20:04:28 IST" name="RegressionSuite" description="This testcase verifies complete flow" finished-at="2023-08-31T20:39:39 IST" duration-ms="2110577" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateTeam -->
+        </test-method> <!-- RegressionSuite -->
       </class> <!-- TestScripts.RegressionTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
