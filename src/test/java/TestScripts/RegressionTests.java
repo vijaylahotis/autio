@@ -147,7 +147,7 @@ public class RegressionTests extends TestBase{
 			Regression.enterbudgetrate1();
 			Thread.sleep(4000);
 			Regression.savechanges2();
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 		    driver.switchTo().newWindow(WindowType.TAB);
 			Azuresignin= new AzureSignIn(driver);
 			Azuresignin.azuresign1();
@@ -170,10 +170,13 @@ public class RegressionTests extends TestBase{
 			Regression.clickonconfirmreason(firstname2);
 			Regression.clickonreason(Inputs.Reason);
 			Regression.clickonconfirm(firstname2);
-			Thread.sleep(20000);
-			Regression.savechanges2();
-			Regression.cancelrolloff1(firstname1);
-			
+		    Thread.sleep(10000);
+			Regression.cancelrolloff1(firstname1); // select roll off date
+			Thread.sleep(5000);
+			Regression.clickonteamname(Inputs.teamname1);
+			Regression.selectmember(firstname1); // select member and select start date as future
+			Regression.confirmove(firstname1);
+			Regression.clickonteamname(Inputs.teamname);
 			
         }						
 }

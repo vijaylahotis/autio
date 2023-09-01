@@ -31,11 +31,12 @@ public class Inputs extends TestAction{
 		
 	// Member Selection	
 		
-		public static final String teamname = "Team-A5";
+		public static final String teamname = "Team-A8";
 		public static final String Position1 = ".Net Developer";
 		public static final String Member1 = "AA 01";
 		public static final String Position2 = "Java Developer";
 		public static final String Member2 = "AA 02";
+		public static final String teamname1 = "Team-A9";
 		
 	
 	
@@ -51,7 +52,7 @@ public class Inputs extends TestAction{
 		
    // Roll Off
 		
-		public static final String Rolloffdate = "31";
+		public static final String Rolloffdate = "1";
 		public static final String Reason = "Natural";
 		
 }

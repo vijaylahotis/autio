@@ -204,4 +204,21 @@ public class RegressionTests2 extends TestBase{
 			Thread.sleep(4000);
 			Regression.savechanges2();
 }
+	    
+	    
+	    @Test(priority=7,description="This testcase verifies to move a member",enabled=true)
+	  		public void Moveteammember33() throws Throwable  {
+	  		    SignIn= new SignInPageObjects(driver);
+	  		    SignIn.hiringsign();		
+	  		    Regression= new RegressionPageObjects(driver);
+	  		   // Regression.selectparentteam(Inputs.ParentTeam2);
+	  			Regression.clickonteamname(Constants.Teamname1);
+	  			Regression.clickonteamname(Constants.Teamname2);
+	  			Regression.selectmember(Constants.PM1);
+	  			Regression.confirmove(Constants.PM1);
+	  			Thread.sleep(4000);
+	  			Regression.enterbudgetrate1();
+	  			Thread.sleep(4000);
+	  			Regression.savechanges2();
+}
 }

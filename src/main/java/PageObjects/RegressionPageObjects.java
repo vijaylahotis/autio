@@ -386,6 +386,9 @@ public class RegressionPageObjects extends TestAction{
 	
 	// Cancel roll off
 	
+	@FindBy(xpath="(//div[@col-id=\"roll_off_date\"])[3]")
+    public WebElement click_rolloff;
+	
 	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired7;
 	
@@ -404,7 +407,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	String confirmrolloff = "(//*[contains(text(), '#')]/ancestor::li//input[contains(@id, 'formCreateRecord_date')])";
 	
-	String confirmdate = "(//div[text()='#'])[2]";
+	String confirmdate = "(//div[text()='#'])[1]";
 	
 	String reasondropdown = "//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-select-in-form-item w-100 css-190m0jy ant-select-single ant-select-show-arrow')]";
 	
@@ -414,6 +417,28 @@ public class RegressionPageObjects extends TestAction{
 	
 	@FindBy(xpath="//span[@class='anticon anticon-close']")
     public WebElement click_X6;
+	
+	
+	//Move team member future date
+	
+	    @FindBy(xpath="(//div[@col-id='team_member_name'])[2]")
+         public WebElement click_member_row;
+	    
+	    String Member="//div[text()='#']";
+	    
+	    @FindBy(xpath="(//div[@col-id='hire_date'])[2]")
+	    public WebElement click_strtdate;
+	    
+	    @FindBy(xpath="//span[contains(text(), 'Save changes')]")
+	    public WebElement click_savechanges;
+	    
+	    @FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	    public WebElement click_actionrequired9;
+	    
+	    String moveteam = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'submit')])";
+	    
+	    @FindBy(xpath="//span[@class='anticon anticon-close']")
+	    public WebElement click_X7;
 	
 	
 
@@ -1142,10 +1167,45 @@ public class RegressionPageObjects extends TestAction{
 		
 		public void cancelrolloff1(String txtfirstname) {
 			try {
+				this.click(click_rolloff);
+				Thread.sleep(20000);
+				this.click(click_savechanges);
+			    this.click(click_savechanges);
 				this.click(click_actionrequired7);
 				this.clickOnDynamicElement(cancelrolloff, txtfirstname);
 				this.click(click_yes4);
 				this.click(click_X5);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					}
+				}
+		
+		
+		// Move
+		
+		public void selectmember(String txtMember) {
+			try {
+				Actions actions = new Actions(driver);
+				actions.doubleClick(click_member_row).perform();
+			  //  this.clickOnDynamicElement(Member, txtMember);
+			  //  this.click(click_strtdate);
+			    Thread.sleep(20000);
+			    this.click(click_savechanges);
+			    this.click(click_savechanges);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return;
+		}
+		
+		public void confirmove(String txtmoveteam) {
+			try {
+				this.click(click_actionrequired9);
+				this.clickOnDynamicElement(moveteam, txtmoveteam);
+				Thread.sleep(4000);
+				this.click(click_X7);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

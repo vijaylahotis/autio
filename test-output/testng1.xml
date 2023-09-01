@@ -5,7 +5,7 @@
     <classes>
 		
 	
-	<class name="TestScripts.RegressionTests">
+	<class name="TestScripts.AdminLogin">
 	<methods>
 		 <include name="RegressionSuite"/>
 	</methods> 
@@ -15,25 +15,3 @@
      </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
