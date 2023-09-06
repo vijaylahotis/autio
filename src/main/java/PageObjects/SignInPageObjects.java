@@ -10,6 +10,7 @@ import basepackage.TestAction;
 import Utilities.Constants;
 import Utilities.Inputs;
 
+@SuppressWarnings("unused")
 public class SignInPageObjects extends TestAction{
 
 	WebDriver driver;
@@ -79,10 +80,10 @@ public class SignInPageObjects extends TestAction{
 		    }
 	
 	public void adminsign() throws InterruptedException {
-	navigateUrl(Constants.URL) ; 
-	enterAdminEmail(Constants.adminEmail); 
+	navigateUrl(Inputs.adminURL) ; 
+	enterAdminEmail(Inputs.adminEmail); 
 	clickOnSign();
-	enterAdminPassword(Constants.adminPassword); 
+	enterAdminPassword(Inputs.adminPassword); 
 	clickOnSignIn(); 	 
 	clickOnYes();
 	//Thread.sleep(5000);
@@ -99,8 +100,8 @@ public class SignInPageObjects extends TestAction{
 			    }
 	
 	public void adminsign1() throws InterruptedException {
-		navigateUrl(Constants.URL) ; 
-		enterAdminEmail(Constants.adminEmail); 
+		navigateUrl(Inputs.adminURL) ; 
+		enterAdminEmail(Inputs.adminEmail); 
 		clickOnSign();   
 }
 	

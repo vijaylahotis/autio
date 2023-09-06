@@ -1,0 +1,22 @@
+<environment>
+    <parameter>
+        <key>Browser</key>
+        <value>Chrome</value>
+    </parameter>
+    <parameter>
+        <key>Browser.Version</key>
+        <value>116.0.5845.141</value>
+    </parameter>
+    <parameter>
+        <key>Application</key>
+        <value>TalentSavvy</value>
+    </parameter>
+    <parameter>
+        <key>Stand</key>
+        <value>Development</value>
+    </parameter>
+    <parameter>
+        <key>User</key>
+        <value>krishna@bsaas.us</value>
+    </parameter>
+</environment>

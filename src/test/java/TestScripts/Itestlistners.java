@@ -40,6 +40,8 @@ public class Itestlistners extends AdminModule implements ITestListener {
 	}
 	
 	
+	
+	
 	public void captureScreen(String testCaseName) throws IOException
 	{
 		TakesScreenshot ts=(TakesScreenshot) driver;//typecasting 

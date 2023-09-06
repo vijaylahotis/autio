@@ -40,19 +40,36 @@ public class RunNightJobsPageObjects extends TestAction{
 	//@FindBy(xpath="//*[text()='Teams']")
 	// public WebElement Teams;
 	
+	@FindBy(xpath="//div[text()='Job Ran Successfully']")
+	public WebElement importpersondata;
+	
+	@FindBy(xpath="//div[text()='Process import run successfully']")
+	public WebElement processimportdata;
+	
 	
 	public void clickOnimportpersondata() throws InterruptedException {
 		this.click(RunJob);
-		Thread.sleep(30000);
+		}
+	
+	public void clickOnprocessimportndata() throws InterruptedException {
 		this.click(selectimportpersondata);
 		this.click(selectprocessimportdata);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		this.click(RunJob);
-		Thread.sleep(5000);
-
+		}
+		
+	public String isImportPersonSuccessfullyMessageDisplayed() {
+		String ImportPersonSuccessfullyMessage=importpersondata.getText();
+		return ImportPersonSuccessfullyMessage;
 		
 	}
 		
+	
+	public String isProcessImportSuccessfullyMessageDisplayed() {
+		String ProcessImportSuccessfullyMessage=processimportdata.getText();
+		return ProcessImportSuccessfullyMessage;
+		
+	}
 	/*public void selectjob(String txtJobName) {
 		try {
 			this.click(selectimportpersondata);

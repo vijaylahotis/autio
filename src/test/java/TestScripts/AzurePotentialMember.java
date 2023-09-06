@@ -47,6 +47,7 @@ public class AzurePotentialMember extends TestBase{
 		String firstname = Azuresignin.enterfirstname();
 		Azuresignin.enterlastname();
 		Azuresignin.enterdetails(AzureInputs.EmployeeType);
+		Azuresignin.selecthiredate(Inputs.HireDate);
 		Azuresignin.clickmanager();
 		Azuresignin.enterotherdetails(AzureInputs.Manager);
 		driver.switchTo().newWindow(WindowType.TAB);

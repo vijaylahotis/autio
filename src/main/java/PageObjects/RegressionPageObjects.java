@@ -134,7 +134,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	// Actions Cancel
 	
-	@FindBy(xpath="//button[contains(@class, 'ant-btn') and contains(span, 'Action Required')]")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired1;
 	
 	String Actions1="//*[text()='#']";
@@ -150,7 +150,7 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//span[@class=\"anticon anticon-close\"]")
     public WebElement click_X1;
 	
-	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired2;
 	
 	@FindBy(xpath="//span[contains(text(), 'All')]")
@@ -184,12 +184,12 @@ public class RegressionPageObjects extends TestAction{
 	
 	// New team member Assign
 	
-	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired3;
 	
 	String Actions3="//*[contains(text(), '#')]";
 	
-	String dropdownteammember = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-190m0jy ant-select-single ant-select-allow-clear ant-select-show-arrow')])[1]";
+	String dropdownteammember = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-nnuwmp ant-select-single ant-select-allow-clear ant-select-show-arrow')])[1]";
 	
 	String teamname = "//*[contains(text(), '#')]";
 	
@@ -199,7 +199,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	String addnewmember = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'submit')])[1]";
 	
-	String dropdownteammember1 = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-190m0jy ant-select-single ant-select-allow-clear ant-select-show-arrow')])[2]";
+	String dropdownteammember1 = "(//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-cascader ant-select-in-form-item css-nnuwmp ant-select-single ant-select-allow-clear ant-select-show-arrow')])[2]";
 	
 	String teamtype1 = "//div[contains(text(), '#')]";
 	
@@ -207,7 +207,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	String mergemember = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'submit')])[2]";
 	
-	String dropdownteammember2 = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@class, 'ant-btn css-190m0jy ant-btn-default ant-btn-block ant-btn-dangerous')])[2]";
+	String dropdownteammember2 = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@class, 'ant-btn css-nnuwmp ant-btn-default ant-btn-block ant-btn-dangerous')])[2]";
 	
 	// @FindBy(xpath="//*[contains(text(), 'Aiden Markram onboarded in Azure AD on @source.HireDate. Please assign Aiden Markram to one of your teams')]")
    // public WebElement click_a1;
@@ -252,7 +252,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	//Merge a new hire
 	
-	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired4;
 	
 	@FindBy(xpath="//*[contains(text(), 'Name XOCRI')]")
@@ -281,7 +281,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	//Move team member past date
 	
-	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
 	 public WebElement click_actionrequired5;
 		
 	@FindBy(xpath="//*[text()='Confirm Move Team Member']")
@@ -299,7 +299,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	//Move team member future date
 	
-	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
 	public WebElement click_actionrequired6;
 			
 	@FindBy(xpath="(//*[text()='Confirm Move Team Member'])[2]")
@@ -331,6 +331,12 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//div[text()='Merged Successfully!']")
 	public WebElement MergedSuccessfully_Message;
 	
+	@FindBy(xpath="//div[text()='Staff Member Updated Successfully!']")
+	public WebElement StaffSuccessfully_Message;
+	
+	@FindBy(xpath="//div[text()='Update Successfully!']")
+	public WebElement CancelrolloffSuccessfully_Message;
+	
 	// Roll _off
 	
 	@FindBy(xpath="(//div[@col-id='roll_off_date'])[2]")
@@ -344,7 +350,7 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="//span[contains(text(), 'Save changes')]")
     public WebElement click_savechanges3;
 	
-	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired0;
 	
 	String cancelbutton1 = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'button')])";
@@ -357,7 +363,7 @@ public class RegressionPageObjects extends TestAction{
 	
 	// Update service provider
 	
-	@FindBy(xpath="(//button[@class='ant-btn css-190m0jy ant-btn-circle ant-btn-default ant-btn-icon-only ant-dropdown-trigger action-circle-btn'])[1]")
+	@FindBy(xpath="(//button[@class='ant-btn css-nnuwmp ant-btn-circle ant-btn-default ant-btn-icon-only ant-dropdown-trigger action-circle-btn'])[1]")
     public WebElement click_editicon;
 	
 	@FindBy(xpath="//span[text()='Edit Team Member']")
@@ -389,7 +395,7 @@ public class RegressionPageObjects extends TestAction{
 	@FindBy(xpath="(//div[@col-id=\"roll_off_date\"])[3]")
     public WebElement click_rolloff;
 	
-	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired7;
 	
 	String cancelrolloff = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'button')])";
@@ -402,14 +408,14 @@ public class RegressionPageObjects extends TestAction{
 	
 	// Confirm roll off
 	
-	@FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	@FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
     public WebElement click_actionrequired8;
 	
 	String confirmrolloff = "(//*[contains(text(), '#')]/ancestor::li//input[contains(@id, 'formCreateRecord_date')])";
 	
 	String confirmdate = "(//div[text()='#'])[1]";
 	
-	String reasondropdown = "//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-select-in-form-item w-100 css-190m0jy ant-select-single ant-select-show-arrow')]";
+	String reasondropdown = "//*[contains(text(), '#')]/ancestor::li//div[contains(@class, 'ant-select ant-select-in-form-item w-100 css-nnuwmp ant-select-single ant-select-show-arrow')]";
 	
 	String reason = "//div[text()='#']";
 	
@@ -432,7 +438,7 @@ public class RegressionPageObjects extends TestAction{
 	    @FindBy(xpath="//span[contains(text(), 'Save changes')]")
 	    public WebElement click_savechanges;
 	    
-	    @FindBy(xpath="//button[@class='ant-btn css-190m0jy ant-btn-default ant-btn-sm action-required-btn']")
+	    @FindBy(xpath="//button[@class='ant-btn css-nnuwmp ant-btn-default ant-btn-sm action-required-btn']")
 	    public WebElement click_actionrequired9;
 	    
 	    String moveteam = "(//*[contains(text(), '#')]/ancestor::li//button[contains(@type, 'submit')])";
@@ -999,6 +1005,16 @@ public class RegressionPageObjects extends TestAction{
 			return MergedSuccessfullyMessage;
 		}
 		
+		public String isStaffSuccessfullyMessageDisplayed() {
+			String StaffSuccessfullyMessage=StaffSuccessfully_Message.getText();
+			return StaffSuccessfullyMessage;
+		}
+		
+		public String isCancelRollOffSuccessfullyMessageDisplayed() {
+			String CancelRollOffSuccessfullyMessage=CancelrolloffSuccessfully_Message.getText();
+			return CancelRollOffSuccessfullyMessage;
+		}
+		
 		// Roll-off Date
 		
 		
@@ -1110,7 +1126,7 @@ public class RegressionPageObjects extends TestAction{
 		
 		public void clickonconfirmrolloffactions(String txtconfirmrolloff) {
 			try {
-				this.click(click_actionrequired8);
+				this.click(click_actionrequired2);
 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
 				wait.until(ExpectedConditions.elementToBeClickable(this.findDynamicElement(confirmrolloff, txtconfirmrolloff)));
 			    this.clickOnDynamicElement(confirmrolloff, txtconfirmrolloff);
@@ -1171,7 +1187,7 @@ public class RegressionPageObjects extends TestAction{
 				Thread.sleep(20000);
 				this.click(click_savechanges);
 			    this.click(click_savechanges);
-				this.click(click_actionrequired7);
+				this.click(click_actionrequired2);
 				this.clickOnDynamicElement(cancelrolloff, txtfirstname);
 				this.click(click_yes4);
 				this.click(click_X5);
@@ -1202,7 +1218,7 @@ public class RegressionPageObjects extends TestAction{
 		
 		public void confirmove(String txtmoveteam) {
 			try {
-				this.click(click_actionrequired9);
+				this.click(click_actionrequired2);
 				this.clickOnDynamicElement(moveteam, txtmoveteam);
 				Thread.sleep(4000);
 				this.click(click_X7);

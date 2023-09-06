@@ -91,6 +91,7 @@ public class AdminModule extends TestBase{
 		SignIn.adminsign();
 		RunJob= new RunNightJobsPageObjects(driver);
 		RunJob.clickOnimportpersondata();
+		Assert.assertEquals(ExpectedValue.expectedImportPersonSuccessfullMessage,RunJob.isImportPersonSuccessfullyMessageDisplayed()); 
 		}
 		
 	// Map Country Location Creation

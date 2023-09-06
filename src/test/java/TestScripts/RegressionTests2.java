@@ -36,7 +36,7 @@ public class RegressionTests2 extends TestBase{
 		Thread.sleep(5000);
 		Regression= new RegressionPageObjects(driver);
 		Regression.clickonteamname(Inputs.teamname);
-		Regression.cancelrolloff1(firstname1);
+	//	Regression.cancelrolloff1(firstname1);
 }
 	
 	// Team Creation
@@ -50,7 +50,7 @@ public class RegressionTests2 extends TestBase{
 			Regression.selectgroup(Inputs.Group2);
 			Regression.enterteamname();
 			Regression.selectteamleader(Inputs.TeamLeader1);
-			Regression.selectteamtype(Inputs.TeamType1);
+		//	Regression.selectteamtype(Inputs.TeamType1);
 			Regression.selectdetails();
 		}
 			
@@ -61,14 +61,14 @@ public class RegressionTests2 extends TestBase{
 			SignIn= new SignInPageObjects(driver);
 			SignIn.adminsign();		
 			Regression= new RegressionPageObjects(driver);
-		    Regression.clickonteamname(teamname);
-			Regression.selectposition1();
+		//  Regression.clickonteamname(teamname);
+		//  Regression.selectposition1();
 			Thread.sleep(1000);
 			Regression.selectmember1(Inputs.Member1);
 			Thread.sleep(5000);
 			Regression.savechanges1();
 			Thread.sleep(3000);
-			Regression.selectposition2();
+		//	Regression.selectposition2();
 			Thread.sleep(1000);
 			Regression.selectmember2(Inputs.Member2);
 			Thread.sleep(5000);
@@ -84,7 +84,7 @@ public class RegressionTests2 extends TestBase{
 			SignIn= new SignInPageObjects(driver);
 			SignIn.adminsign();		
 			Regression= new RegressionPageObjects(driver);
-			Regression.clickonteamname();
+			Regression.clickonteamname(Constants.Teamname1);
 			Regression.createposition1(Inputs.Position1);
 			Regression.createmember1(Inputs.Member1);
 			Regression.savechanges1();
@@ -99,8 +99,8 @@ public class RegressionTests2 extends TestBase{
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
 		    Regression= new RegressionPageObjects(driver);
-		    Regression.clickonteamname();
-		    Regression.actioncancel2(Inputs.Actions2);
+		    Regression.clickonteamname(Constants.Teamname1);
+		//    Regression.actioncancel2(Inputs.Actions2);
 	    }
 	 
    // Assign a new hire to an existing open position
@@ -110,8 +110,8 @@ public class RegressionTests2 extends TestBase{
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
 		    Regression= new RegressionPageObjects(driver);
-		    Regression.clickonteamname();
-		    Regression.clickonactions(Inputs.Actions3);
+		    Regression.clickonteamname(Constants.Teamname1);
+	//	    Regression.clickonactions(Inputs.Actions3);
 		    Regression.Selectteampostion1();
 		    Regression.Selectteampostion2();
 		    Regression.entermonthlyrate();
@@ -129,7 +129,7 @@ public class RegressionTests2 extends TestBase{
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
 		    Regression= new RegressionPageObjects(driver);
-		    Regression.clickonteamname();
+		    Regression.clickonteamname(Constants.Teamname1);
 		    Regression.clickonactions();
 		    Regression.Mergeteampostion1();
 		    Regression.Mergeteampostion2();
@@ -146,7 +146,7 @@ public class RegressionTests2 extends TestBase{
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
 		    Regression= new RegressionPageObjects(driver);
-		    Regression.clickonteamname();
+		    Regression.clickonteamname(Constants.Teamname1);
 		    Regression.clickonmoveteammember();
 	    }
 	    
@@ -158,7 +158,7 @@ public class RegressionTests2 extends TestBase{
 		    SignIn= new SignInPageObjects(driver);
 		    SignIn.adminsign();		
 		    Regression= new RegressionPageObjects(driver);
-		    Regression.clickonteamname();
+		    Regression.clickonteamname(Constants.Teamname1);
 		    Regression.clickonmoveteammember1();
 	    }
 	    

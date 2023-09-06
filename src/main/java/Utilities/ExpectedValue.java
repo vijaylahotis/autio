@@ -18,5 +18,8 @@ public class ExpectedValue {
 		public static final String expectedupdatedsuccessfullMessage = "Updated Successfully!";
 		public static final String expectedaddedsuccessfullMessage = "Added Successfully!";
 		public static final String expectedmergedsuccessfullMessage = "Merged Successfully!";
-
+		public static final String expectedImportPersonSuccessfullMessage = "Job Ran Successfully";
+		public static final String expectedProcessImportSuccessfullMessage = "Process import run successfully";
+		public static final String expectedStaffMemberSuccessfullMessage = "Staff Member Updated Successfully!";
+		public static final String expectedCancelRollOffSuccessfullMessage = "Update Successfully!";
 }

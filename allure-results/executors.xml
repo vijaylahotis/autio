@@ -1,0 +1,6 @@
+<executors>
+    <parameter>
+        <key>Regression Suite</key>
+        <value>Regression Suite</value>
+    </parameter>
+</executors>

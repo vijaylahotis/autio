@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScripts.RegressionTests">
+      <class name="TestScripts.AzurePotentialMember">
         <methods>
           <include name="initializeChrome"/>
-          <include name="RegressionSuite"/>
+          <include name="CreateUser"/>
         </methods>
-      </class> <!-- TestScripts.RegressionTests -->
+      </class> <!-- TestScripts.AzurePotentialMember -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

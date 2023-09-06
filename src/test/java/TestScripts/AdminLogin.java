@@ -22,7 +22,11 @@ public class AdminLogin extends TestBase{
 
 	
 	//signin test case
-		@Test(priority=0,description="This testcase verifies to signin",enabled=true)
+		@Test(priority=0,description="Test Case Scenarios:\n" +
+				"1) Verify Sign-In\n" +
+		        "2) Verify Sign-Out\n" +
+		        "3) Verify SLogin\n", enabled = true)
+		
 		public void verifysigninFunctionality() throws InterruptedException {
 			sign= new SignInPageObjects(driver);
 			sign.adminsign();

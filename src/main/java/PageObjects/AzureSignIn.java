@@ -92,6 +92,8 @@ public class AzureSignIn extends TestAction{
     @FindBy(xpath="(//span[text()='28'])[2]")
    	public WebElement selecthiredate;
     
+    String hiredate = "(//span[text()='#'])[1]";
+    
     @FindBy(xpath="//span[text()='Add manager']")
    	public WebElement clickmanager;
        
@@ -153,19 +155,19 @@ public class AzureSignIn extends TestAction{
                 }
     	
     	public void azuresign() throws InterruptedException {
-    		navigateUrl(AzureInputs.AzureURL); 
-    		enterAzureEmail(AzureInputs.AzureEmail); 
+    		navigateUrl(Inputs.AzureURL); 
+    		enterAzureEmail(Inputs.AzureEmail); 
     		clickOnnext();
-    		enterAzurePassword(AzureInputs.AzurePassword); 
+    		enterAzurePassword(Inputs.AzurePassword); 
     		clickOnSignIn(); 	 
     		//clickOnYes();
     	}
     	
     	public void azuresign1() throws InterruptedException {
-    		navigateUrl(AzureInputs.AzureURL); 
-    		enterAzureEmail(AzureInputs.AzureEmail); 
+    		navigateUrl(Inputs.AzureURL); 
+    		enterAzureEmail(Inputs.AzureEmail); 
     		clickOnnext();
-    		enterAzurePassword(AzureInputs.AzurePassword); 
+    		enterAzurePassword(Inputs.AzurePassword); 
     		clickOnSignIn(); 	 
     	//	clickOnYes();
     	}
@@ -214,7 +216,17 @@ public class AzureSignIn extends TestAction{
         		this.sendkeys(enteremployeetype, EmployeeType);
         		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickhiredate);
         		this.click(clickhiredate);
-        		this.click(selecthiredate);
+        	//	this.click(selecthiredate);
+    	}
+    	
+    	public void selecthiredate(String txthiredate) {
+    		try {
+    			
+    		    this.clickOnDynamicElement(hiredate, txthiredate);
+    		} catch (Exception e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
     	}
     	
     	public void clickmanager() throws InterruptedException {
